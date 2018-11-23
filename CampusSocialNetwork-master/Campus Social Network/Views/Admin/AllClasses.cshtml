@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "All Classes";
+}
+<table class="table">
+    <tr>
+        <th>
+            Class ID
+        </th>
+        <th>
+            Class Name
+        </th>
+        <th>
+            Capacity
+        </th>
+        
+    </tr>
+    @*
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dob)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    *@
+</table>

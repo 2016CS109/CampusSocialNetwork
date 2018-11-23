@@ -1,0 +1,27 @@
+﻿@{
+    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+    string cLayout = "";
+    if(controller == "Home" || controller == "Manage" || controller == "Account")
+    {
+        cLayout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    if (controller == "Admin")
+    {
+        cLayout = "~/Views/Shared/_Layout_Admin.cshtml";
+    }
+
+    if (controller == "Teacher")
+    {
+        cLayout = "~/Views/Shared/_Layout_Teacher.cshtml";
+    }
+
+    if (controller == "Student")
+    {
+        cLayout = "~/Views/Shared/_Layout_Student.cshtml";
+    }
+
+    
+
+    Layout = cLayout;
+}

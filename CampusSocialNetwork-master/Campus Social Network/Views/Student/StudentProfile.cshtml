@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Student Profile";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-75">
+            <div class="pagecontent">
+                <div class="post">
+                    <label for="sel1">Share with:</label>
+                    <select class="selectpri" id="sel1">
+                        <option>Everyone</option>
+                        <option>Classmates</option>
+                    </select>
+                    <br />
+                    <a href="#">
+                        <span class="glyphicon glyphicon-camera"></span> Add picture
+                    </a>
+                    <br />
+                    <textarea class="text-left" rows="5" cols="80"></textarea>
+                    <br />
+                    <input type="submit" class="btn" value="Post">
+                </div>
+                <hr />
+                <div class="tabs">
+
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#">Public</a></li>
+                        <li>@Html.ActionLink("Class group", "Index", "Login")</li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="posts">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="https://vignette.wikia.nocookie.net/peaky-blinders/images/9/93/Tommyportrait2.png/revision/latest?cb=20171106170631" class="media-object" style="width:60px">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="#"> Thomas Shelby </a></h4>
+                            <p class="col-lg-8">You can change what you do, but you can’t change what you want. </p>
+                        </div>
+                        <br />
+                        <div class="btn-group-sm">
+                            <button class="btn"> Like </button>
+                            <button class="btn"> Comment </button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="https://vignette.wikia.nocookie.net/peaky-blinders/images/9/93/Tommyportrait2.png/revision/latest?cb=20171106170631" class="media-object" style="width:60px">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="#"> Thomas Shelby </a></h4>
+                            <p class="col-lg-8">Alright lads this is a respectable event and we will behave accordingly.</p>
+                        </div>
+                        <br />
+                        <div class="btn-group-sm">
+                            <button class="btn"> Like </button>
+                            <button class="btn"> Comment </button>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

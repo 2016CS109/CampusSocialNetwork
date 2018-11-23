@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Newsfeed";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-75">
+            <div class="pagecontent">
+                <div class="post">
+                    <label for="sel1">Share with:</label>
+                    <select class="selectpri" id="sel1">
+                        <option>Everyone</option>
+                        <option>Classmates</option>
+                    </select>
+                    <br />
+                    <a href="#">
+                        <span class="glyphicon glyphicon-camera"></span> Add picture
+                    </a>
+                    <br />
+                    <textarea class="text-left" rows="5" cols="80"></textarea>
+                    <br />
+                    <input type="submit" class="btn" value="Post">
+                </div>
+                <hr />
+                <div class="tabs">
+
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#">Public</a></li>
+                        <li><a href="#">Class Group</a></li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="posts">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg" class="media-object" style="width:60px">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="#"> Irina Smith </a></h4>
+                            <p class="col-lg-8">Keep calm and know Google can help you find a to fix almost every problem. If not it will tell you who can fix it.</p>
+                        </div>
+                        <br />
+                        <div class="btn-group-sm">
+                            <button class="btn"> Like </button>
+                            <button class="btn"> Comment </button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXGMOgMyTp39uvLfxz3sG98F1LhKRbp8AUty_Q_2pHI8ZpaxeN4A" class="media-object" style="width:60px">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="#"> John Arthur </a></h4>
+                            <p class="col-lg-8">I don't have goals. Goals are for soccer. I'm not soccer.</p>
+                        </div>
+                        <br />
+                        <div class="btn-group-sm">
+                            <button class="btn"> Like </button>
+                            <button class="btn"> Comment </button>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

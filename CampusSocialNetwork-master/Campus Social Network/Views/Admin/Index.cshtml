@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Admin Panel";
+}
+<center>
+    <div>
+        <ul style="display:inline-block">
+            <li style="display:inline-block">
+                <img src="~/Images/Admins/Student.png" alt="Student Pic" width="200" height="200" />
+                <h3>@Html.ActionLink("Add Student", "AddStudent", "Admin")</h3>
+            </li>
+
+            <li style="display:inline-block">
+                <img src="~/Images/Admins/Teacher.png" alt="Teacher Pic" width="200" height="200" />
+                <h3>@Html.ActionLink("Add Teacher", "AddTeacher", "Admin")</h3>
+            </li>
+            <li style="display:inline-block">
+                <img src="~/Images/Admins/Class.png" alt="Class Pic" width="200" height="200" />
+                <h3>@Html.ActionLink("Add Class", "AddClass", "Admin")</h3>
+            </li>
+</ul>
+    </div>
+</center>

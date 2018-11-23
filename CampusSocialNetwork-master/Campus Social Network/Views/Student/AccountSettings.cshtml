@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Account Settings";
+}
+
+
+<div class="content">
+    <div class="row">
+        <div class="col-75">
+            <div class="cont">
+                <div class="edit">
+                    
+                    <span class="glyphicon glyphicon-camera"></span>@Html.ActionLink("Change Profile Picture", "ChangePicture", "Student")
+                    
+                    @Html.ActionLink("Change Password", "ChangePassword", "Student")
+                    <br />
+                </div>
+
+                <form action="">
+                    <div class="container">
+
+                        <hr>
+
+                        <label for="email"><b>Change first name</b></label>
+                        <input type="text" value="Thomas" name="FirstName" required>
+                        <label for="email"><b>Change last name</b></label>
+                        <input type="text" value="Shelby" name="LastName" required>
+                        <label for="psw"><b>Change email</b></label>
+                        <input type="text" value="thomas373@yahoo.com" name="Email" required>
+                        <label for="psw-repeat"><b>Change contact number</b></label>
+                        <input type="text" value="+923028090100" name="ContactNumber" required>
+                        <p>
+                            <hr>
+                            <button type="submit" class="registerbtn">Confirm Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
