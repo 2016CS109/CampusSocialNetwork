@@ -5,20 +5,37 @@
 
 
 
-<form id="AddClass" name="AddClass" method="post" action="">
+<form id="AddClass" name="AddClass" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
     <div class="form_description">
         <p>Fill up below form to add a new Class.</p>
     </div>
     <fieldset>
-
         <label>Class Name:</label>
         <input type="text" name="ClassName" value="" placeholder="Enter Name of the Class..."><br>
         <label>Capacity:</label>
         <input type="text" name="ClassCapacity" value="" placeholder="Enter Capacity of the Class..."><br>
-
     </fieldset>
     <br>
     <input type="submit" class="btn btn-default" value="Add Class">
 </form>
 
 
+<script>
+    function AjaxPost(formData) {
+        var ajaxConfig = {
+            type: "post",
+            url: "/Admin/AddClass",
+            data: new FormData(formData),
+            success: function (result) {
+                alert(result);
+                window.location.href = "/Admin/AddClass"
+            }
+        }
+        if ($(formData).attr('enctype') == "multipart/form-data") {
+            ajaxConfig["contentType"] = false;
+            ajaxConfig["processData"] = false;
+        }
+        $.ajax(ajaxConfig);
+        return false;
+    }
+</script>

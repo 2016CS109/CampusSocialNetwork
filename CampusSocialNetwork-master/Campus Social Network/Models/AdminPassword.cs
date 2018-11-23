@@ -7,18 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Campus_Social_Network
+namespace Campus_Social_Network.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class AspNetUserClaim
+    public partial class AdminPassword
     {
         public int Id { get; set; }
-        public string UserId { get; set; }
-        public string ClaimType { get; set; }
-        public string ClaimValue { get; set; }
-    
-        public virtual AspNetUser AspNetUser { get; set; }
+        public string Password { get; set; }
     }
 }

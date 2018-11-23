@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CSNDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AddClass">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassName" Type="varchar" MaxLength="250" />
+    <Property Name="ClassCapacity" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="AddStudent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="150" />
+    <Property Name="LastName" Type="varchar" MaxLength="150" />
+    <Property Name="DateOfBirth" Type="varchar" MaxLength="150" />
+    <Property Name="CNICNo" Type="varchar" MaxLength="150" />
+    <Property Name="ImagePath" Type="varchar(max)" />
+    <Property Name="RollNo" Type="varchar" MaxLength="150" />
+    <Property Name="Class" Type="varchar" MaxLength="150" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="Password" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="AddTeacher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="150" />
+    <Property Name="LastName" Type="varchar" MaxLength="150" />
+    <Property Name="Designation" Type="varchar" MaxLength="250" />
+    <Property Name="ImagePath" Type="varchar(max)" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="Password" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="150" />
+    <Property Name="LastName" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="AdminPassword">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="AdminPofilePhotoPath">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminImagePath" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="CSNDBModelStoreContainer">
+    <EntitySet Name="AddClass" EntityType="Self.AddClass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AddStudent" EntityType="Self.AddStudent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AddTeacher" EntityType="Self.AddTeacher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdminPassword" EntityType="Self.AdminPassword" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdminPofilePhotoPath" EntityType="Self.AdminPofilePhotoPath" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

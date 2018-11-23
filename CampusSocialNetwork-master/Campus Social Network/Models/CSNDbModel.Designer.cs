@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'F:\TALIT M\UET CS\Semester 5\SE Lab\Campus Social Network\Campus Social Network\CSNDB Model.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Muhammad Awais\Desktop\110\CampusSocialNetwork-master\Campus Social Network\Models\CSNDbModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

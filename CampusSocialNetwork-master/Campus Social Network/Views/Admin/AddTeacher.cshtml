@@ -5,27 +5,23 @@
 
 
 
-<form id="AddTeacher" name="AddTeacher" method="post" action="">
+<form id="AddTeacher" name="AddTeacher" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
     <div class="form_description">
         <p>Fill up below form to add a new Teacher.</p>
     </div>
     <fieldset>
-
         <label>First Name:</label>
         <input type="text" name="FirstName" value="" placeholder="Enter First Name..."><br>
         <label>Last Name:</label>
         <input type="text" name="LastName" value="" placeholder="Enter Last Name..."><br>
         <label>Designation:</label>
         <input type="text" name="Designation" value="" placeholder="Enter Designation of the Teacher..."><br>
-        <label>Contact Number:</label>
-        <input type="text" name="ContactNo" value="" placeholder="Enter Contact Number of the Teacher..."><br>
-
         <label>Profile Picture:</label>
         <input type="file" name="ProfilePic"> <br>
+        <label>Contact Number:</label>
+        <input type="text" name="ContactNo" value="" placeholder="Enter Contact Number of the Teacher..."><br>
     </fieldset>
-
     <fieldset>
-
         <label>Email:</label>
         <input type="text" name="Email" value="" placeholder="abc@domain.com"><br>
         <label>Password:</label>
@@ -35,4 +31,22 @@
     <input type="submit" class="btn btn-default" value="Add Teacher">
 </form>
 
-
+<script>
+    function AjaxPost(formData) {
+        var ajaxConfig = {
+            type: "post",
+            url: "/Admin/AddTeacher",
+            data: new FormData(formData),
+            success: function (result) {
+                alert(result);
+                window.location.href = "/Admin/AddTeacher"
+            }
+        }
+        if ($(formData).attr('enctype') == "multipart/form-data") {
+            ajaxConfig["contentType"] = false;
+            ajaxConfig["processData"] = false;
+        }
+        $.ajax(ajaxConfig);
+        return false;
+    }
+</script>

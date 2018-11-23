@@ -5,29 +5,25 @@
 
 
 
-<form id="AddStudent" name="AddStudent" method="post" action="">
+<form id="AddStudent" name="AddStudent" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
     <div class="form_description">
         <p>Fill up below form to add a new student.</p>
     </div>
     <fieldset>
-
         <label>First Name:</label>
         <input type="text" name="FirstName" value="" placeholder="Enter First Name..."><br>
         <label>Last Name:</label>
         <input type="text" name="LastName" value="" placeholder="Enter Last Name..."><br>
         <label>Date of Birth:</label>
-        <input type="date" name="DateOfBirth" value=""><br>
-        <label>Gender:</label>
-        <input type="radio" name="Gender" value="Male"> Male
-        <input type="radio" name="Gender" value="Female"> Female
-        <input type="radio" name="Gender" value="Other"> Other <br />
+        <input type="date" name="DateOfBirth" value=""><br><br />
+        <label>CNIC Number:</label>
+        <input type="text" name="CNICNo" value=""><br>
         <label>Profile Picture:</label>
         <input type="file" name="ProfilePic"> <br>
     </fieldset>
     <fieldset>
-
         <label>Registration Number:</label>
-        <input type="text" name="RegNo" value="" placeholder="YYYY-XX-999"><br>
+        <input type="text" name="RollNo" value="" placeholder="YYYY-XX-999"><br>
         <label>Class:</label>
         <select name="Class">
             <option value="2016-CSE-A">2016-CSE-A</option>
@@ -35,9 +31,10 @@
             <option value="2016-CSE-C">2016-CSE-C</option>
             <option value="2016-CSE-D">2016-CSE-D</option>
         </select><br />
+        <label>Contact Number:</label>
+        <input type="text" name="ContactNo" value="" placeholder="Enter Contact Number of the Student..."><br>
     </fieldset>
     <fieldset>
-
         <label>Email:</label>
         <input type="text" name="Email" value="" placeholder="abc@domain.com"><br>
         <label>Password:</label>
@@ -47,4 +44,22 @@
     <input type="submit" class="btn btn-default" value="Add Student">
 </form>
 
-
+<script>
+    function AjaxPost(formData) {
+        var ajaxConfig = {
+            type: "post",
+            url: "/Admin/AddStudent",
+            data: new FormData(formData),
+            success: function (result) {
+                alert(result);
+                window.location.href = "/Admin/AddStudent"
+            }
+        }
+        if ($(formData).attr('enctype') == "multipart/form-data") {
+            ajaxConfig["contentType"] = false;
+            ajaxConfig["processData"] = false;
+        }
+        $.ajax(ajaxConfig);
+        return false;
+    }
+</script>

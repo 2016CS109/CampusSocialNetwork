@@ -197,46 +197,49 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="AspNetRole.cs">
-      <DependentUpon>CSNDB Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUser.cs">
-      <DependentUpon>CSNDB Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUserClaim.cs">
-      <DependentUpon>CSNDB Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUserLogin.cs">
-      <DependentUpon>CSNDB Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
-    <Compile Include="CSNDB Model.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CSNDB Model.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CSNDB Model.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CSNDB Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CSNDB Model.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CSNDB Model.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>CSNDB Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AddClass.cs">
+      <DependentUpon>CSNDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddStudent.cs">
+      <DependentUpon>CSNDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddTeacher.cs">
+      <DependentUpon>CSNDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Admin.cs">
+      <DependentUpon>CSNDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AdminPassword.cs">
+      <DependentUpon>CSNDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AdminPofilePhotoPath.cs">
+      <DependentUpon>CSNDbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\AdminViewModels.cs" />
+    <Compile Include="Models\CSNDbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSNDbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CSNDbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSNDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CSNDbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSNDbModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -249,16 +252,6 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="CSNDB Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CSNDB Model.edmx</DependentUpon>
-      <LastGenOutput>CSNDB Model.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="CSNDB Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CSNDB Model.edmx</DependentUpon>
-      <LastGenOutput>CSNDB Model.cs</LastGenOutput>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -268,6 +261,16 @@
     <Content Include="Images\Admins\Student.png" />
     <Content Include="Images\Admins\Teacher.png" />
     <Content Include="Images\Users\Tommy.png" />
+    <Content Include="Models\CSNDbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CSNDbModel.edmx</DependentUpon>
+      <LastGenOutput>CSNDbModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\CSNDbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CSNDbModel.edmx</DependentUpon>
+      <LastGenOutput>CSNDbModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -275,12 +278,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="CSNDB Model.edmx">
+    <EntityDeploy Include="Models\CSNDbModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CSNDB Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>CSNDbModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="CSNDB Model.edmx.diagram">
-      <DependentUpon>CSNDB Model.edmx</DependentUpon>
+    <Content Include="Models\CSNDbModel.edmx.diagram">
+      <DependentUpon>CSNDbModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -350,6 +353,9 @@
     <Content Include="Views\Admin\ChangePicture.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AppFile\AdminProfilePhoto\" />
+    <Folder Include="AppFile\StudentsImagesByAdmin\" />
+    <Folder Include="AppFile\TeachersImagesByAdmin\" />
     <Folder Include="Content\assets\" />
   </ItemGroup>
   <ItemGroup>

@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Campus_Social_Network
+namespace Campus_Social_Network.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class CSNDBEntities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public CSNDBEntities()
+            : base("name=CSNDBEntities")
         {
         }
     
@@ -25,10 +25,11 @@ namespace Campus_Social_Network
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<AddClass> AddClasses { get; set; }
+        public virtual DbSet<AddStudent> AddStudents { get; set; }
+        public virtual DbSet<AddTeacher> AddTeachers { get; set; }
+        public virtual DbSet<Admin> Admins { get; set; }
+        public virtual DbSet<AdminPassword> AdminPasswords { get; set; }
+        public virtual DbSet<AdminPofilePhotoPath> AdminPofilePhotoPaths { get; set; }
     }
 }
