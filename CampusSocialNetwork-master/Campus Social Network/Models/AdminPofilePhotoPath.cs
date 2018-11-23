@@ -16,5 +16,6 @@ namespace Campus_Social_Network.Models
     {
         public int Id { get; set; }
         public string AdminImagePath { get; set; }
+        public System.Web.HttpPostedFileBase ProfilePic { get; set; }
     }
 }

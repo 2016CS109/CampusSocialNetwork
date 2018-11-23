@@ -116,13 +116,85 @@ namespace Campus_Social_Network.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult UpdateProfile(Admin item)
+        {
+            using (entity)
+            {
+                List<Admin> admin_list = entity.Admins.ToList();
+                foreach (Admin s in admin_list)
+                {
+                    entity.Admins.Remove(s);
+                    entity.SaveChanges();
+                }
+
+                entity.Admins.Add(item);
+                entity.SaveChanges();
+                var result = "Successfully added";
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+        }
         public ActionResult ChangePassword()
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult ChangePassword(AdminPassword item)
+        {
+            using (entity)
+            {
+                List<AdminPassword> admin_password_list = entity.AdminPasswords.ToList();
+                foreach (AdminPassword obj in admin_password_list)
+                {
+                    entity.AdminPasswords.Remove(obj);
+                    entity.SaveChanges();
+                }
+
+                entity.AdminPasswords.Add(item);
+                entity.SaveChanges();
+                var result = "Successfully added";
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+        }
         public ActionResult ChangePicture()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult ChangePicture(AdminPofilePhotoPath item)
+        {
+            using (entity)
+            {
+                List<AdminPofilePhotoPath> admin_Profile_Pic_lst = entity.AdminPofilePhotoPaths.ToList();
+                foreach (AdminPofilePhotoPath obj in admin_Profile_Pic_lst)
+                {
+                    entity.AdminPofilePhotoPaths.Remove(obj);
+                    entity.SaveChanges();
+                }
+                var folderPath = Server.MapPath("~/AppFile/AdminProfilePhoto");
+                System.IO.DirectoryInfo folderInfo = new DirectoryInfo(folderPath);
+
+                foreach (FileInfo file in folderInfo.GetFiles())
+                {
+                    file.Delete();
+                }
+                foreach (DirectoryInfo dir in folderInfo.GetDirectories())
+                {
+                    dir.Delete(true);
+                }
+                string fileName = Path.GetFileNameWithoutExtension(item.ProfilePic.FileName);
+                string extension = Path.GetExtension(item.ProfilePic.FileName);
+                fileName = fileName + DateTime.Now.ToString("yymmssff") + extension;
+                item.AdminImagePath = "~/AppFile/AdminProfilePhoto" + fileName;
+                item.ProfilePic.SaveAs(Path.Combine(Server.MapPath("~/AppFile/AdminProfilePhoto"), fileName));
+                entity.AdminPofilePhotoPaths.Add(item);
+                entity.SaveChanges();
+                var result = "Successfully added";
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
         }
 
 

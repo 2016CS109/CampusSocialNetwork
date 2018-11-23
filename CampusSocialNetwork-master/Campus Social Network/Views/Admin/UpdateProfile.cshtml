@@ -16,11 +16,9 @@
                     <br />
                 </div>
 
-                <form action="">
+                <form id="UpdateProfile" name="UpdateProfile" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
                     <div class="container">
-
                         <hr>
-
                         <label for="email"><b>Change first name</b></label>
                         <input type="text" value="Admin" name="FirstName" required>
                         <label for="email"><b>Change last name</b></label>
@@ -28,7 +26,7 @@
                         <label for="psw"><b>Change email</b></label>
                         <input type="text" value="admin@campussocialnetwork.com" name="Email" required>
                         <label for="psw-repeat"><b>Change contact number</b></label>
-                        <input type="text" value="+923040484117" name="ContactNumber" required>
+                        <input type="text" value="+923040484117" name="ContactNo" required>
                         <p>
                             <hr>
                             <button type="submit" class="registerbtn">Confirm Changes</button>
@@ -39,3 +37,22 @@
     </div>
 </div>
 
+<script>
+    function AjaxPost(formData) {
+        var ajaxConfig = {
+            type: "post",
+            url: "/Admin/UpdateProfile",
+            data: new FormData(formData),
+            success: function (result) {
+                alert(result);
+                window.location.href = "/Admin/UpdateProfile"
+            }
+        }
+        if ($(formData).attr('enctype') == "multipart/form-data") {
+            ajaxConfig["contentType"] = false;
+            ajaxConfig["processData"] = false;
+        }
+        $.ajax(ajaxConfig);
+        return false;
+    }
+</script>
