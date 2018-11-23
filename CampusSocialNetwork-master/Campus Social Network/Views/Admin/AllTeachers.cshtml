@@ -1,50 +1,53 @@
-﻿
+﻿@model IEnumerable<Campus_Social_Network.Models.AddTeacher>
+
 @{
-    ViewBag.Title = "All Teachers";
+    ViewBag.Title = "AllTeachers";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
 }
 <table class="table">
     <tr>
         <th>
-            Teacher ID
+            @Html.DisplayNameFor(model => model.FirstName)
         </th>
         <th>
-            First Name
+            @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
-            Last Name
+            @Html.DisplayNameFor(model => model.Designation)
         </th>
         <th>
-            Desination
+            @Html.DisplayNameFor(model => model.ContactNo)
         </th>
         <th>
-            Email
+            @Html.DisplayNameFor(model => model.Email)
         </th>
         <th>
-            Contact Number
+            @Html.DisplayNameFor(model => model.Password)
         </th>
+        <th></th>
     </tr>
-    @*
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RegNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EmailId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Dob)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
-            </tr>
-        }
-    *@
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+    </tr>
+}
+
 </table>

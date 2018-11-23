@@ -1,50 +1,71 @@
-﻿
+﻿@model IEnumerable<Campus_Social_Network.Models.AddStudent>
+
 @{
-    ViewBag.Title = "All Students";
+    ViewBag.Title = "AllStudents";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
 }
 <table class="table">
     <tr>
         <th>
-            Student ID
+            @Html.DisplayNameFor(model => model.FirstName)
         </th>
         <th>
-            First Name
+            @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
-            Last Name
+            @Html.DisplayNameFor(model => model.DateOfBirth)
         </th>
         <th>
-            Date of Birth
+            @Html.DisplayNameFor(model => model.CNICNo)
         </th>
         <th>
-            Email
+            @Html.DisplayNameFor(model => model.RollNo)
         </th>
         <th>
-            Class
+            @Html.DisplayNameFor(model => model.Class)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th></th>
     </tr>
-    @*
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.RegNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmailId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dob)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-    }
-        *@
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CNICNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RollNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+    </tr>
+}
+
 </table>

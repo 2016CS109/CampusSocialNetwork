@@ -81,17 +81,35 @@ namespace Campus_Social_Network.Controllers
 
         public ActionResult AllStudents()
         {
-            return View();
+            List<AddStudent> add_student_temp_lst = new List<AddStudent>();
+            List<AddStudent> add_student_list = entity.AddStudents.ToList();
+            foreach (AddStudent obj in add_student_list)
+            {
+                add_student_temp_lst.Add(obj);
+            }
+            return View(add_student_temp_lst);
         }
 
         public ActionResult AllTeachers()
         {
-            return View();
+            List<AddTeacher> add_teacher_temp_lst = new List<AddTeacher>();
+            List<AddTeacher> add_teacher_list = entity.AddTeachers.ToList();
+            foreach (AddTeacher obj in add_teacher_list)
+            {
+                add_teacher_temp_lst.Add(obj);
+            }
+            return View(add_teacher_temp_lst);
         }
 
         public ActionResult AllClasses()
         {
-            return View();
+            List<AddClass> add_class_temp_lst = new List<AddClass>();
+            List<AddClass> add_class_list = entity.AddClasses.ToList();
+            foreach (AddClass obj in add_class_list)
+            {
+                add_class_temp_lst.Add(obj);
+            }
+            return View(add_class_temp_lst);
         }
 
         public ActionResult UpdateProfile()

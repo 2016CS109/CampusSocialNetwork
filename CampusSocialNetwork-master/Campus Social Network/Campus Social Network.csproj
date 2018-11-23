@@ -338,9 +338,6 @@
     <Content Include="Views\Admin\AddStudent.cshtml" />
     <Content Include="Views\Admin\AddTeacher.cshtml" />
     <Content Include="Views\Admin\AddClass.cshtml" />
-    <Content Include="Views\Admin\AllStudents.cshtml" />
-    <Content Include="Views\Admin\AllTeachers.cshtml" />
-    <Content Include="Views\Admin\AllClasses.cshtml" />
     <Content Include="Views\Admin\UpdateProfile.cshtml" />
     <Content Include="Views\Student\Newsfeed.cshtml" />
     <Content Include="Views\Student\StudentProfile.cshtml" />
@@ -351,6 +348,9 @@
     <Content Include="Views\Student\ChangePicture.cshtml" />
     <Content Include="Views\Admin\ChangePassword.cshtml" />
     <Content Include="Views\Admin\ChangePicture.cshtml" />
+    <Content Include="Views\Admin\AllStudents.cshtml" />
+    <Content Include="Views\Admin\AllTeachers.cshtml" />
+    <Content Include="Views\Admin\AllClasses.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFile\AdminProfilePhoto\" />
