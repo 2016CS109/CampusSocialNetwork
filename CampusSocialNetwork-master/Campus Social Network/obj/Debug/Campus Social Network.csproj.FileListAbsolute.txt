@@ -408,7 +408,6 @@ D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_C
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\110_Part2\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.csprojResolveAssemblyReference.cache
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\110_Part2\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.dll
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\110_Part2\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.pdb
-D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\106_Part2\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.csprojResolveAssemblyReference.cache
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\106_Part2\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.dll
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\106_Part2\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.pdb
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\106_Part2\CampusSocialNetwork-master\Campus Social Network\bin\ApplicationInsights.config

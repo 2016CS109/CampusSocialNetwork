@@ -9,19 +9,19 @@
     </div>
     <fieldset>
         <label>First Name:</label>
-        <input type="text" name="FirstName" value="" placeholder="Enter First Name..."><br>
+        <input type="text" name="FirstName" value="" placeholder="Enter First Name..." required><br>
         <label>Last Name:</label>
-        <input type="text" name="LastName" value="" placeholder="Enter Last Name..."><br>
+        <input type="text" name="LastName" value="" placeholder="Enter Last Name..." required><br>
         <label>Date of Birth:</label>
-        <input type="date" name="DateOfBirth" value=""><br><br />
+        <input type="date" name="DateOfBirth" value="" required><br><br />
         <label>CNIC Number:</label>
-        <input type="text" name="CNICNo" value=""><br>
+        <input type="text" name="CNICNo" value="" required pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}" title="XXXXX-XXXXXXX-X"><br>
         <label>Profile Picture:</label>
-        <input type="file" name="ProfilePic"> <br>
+        <input type="file" name="ProfilePic" required> <br>
     </fieldset>
     <fieldset>
         <label>Registration Number:</label>
-        <input type="text" name="RollNo" value="" placeholder="YYYY-XX-999"><br>
+        <input type="text" name="RollNo" value="" placeholder="YYYY-XX-999" required pattern="[0-9]{4}-[A-Z]{3}-[0-9]{3}" title="XXXX-ABC-XXX"><br>
         <label>Class:</label>
         <select name="Class">
             <option value="2016-CSE-A">2016-CSE-A</option>
@@ -30,13 +30,13 @@
             <option value="2016-CSE-D">2016-CSE-D</option>
         </select><br />
         <label>Contact Number:</label>
-        <input type="text" name="ContactNo" value="" placeholder="Enter Contact Number of the Student..."><br>
+        <input type="text" name="ContactNo" value="" required placeholder="Enter Contact Number of the Student..." pattern="[0-4]{2}[0-9]{9}" title="Phone number with 0-4 and remaing 9 digit with 0-9"><br>
     </fieldset>
     <fieldset>
         <label>Email:</label>
-        <input type="text" name="Email" value="" placeholder="abc@domain.com"><br>
+        <input type="email" name="Email" value="" placeholder="abc@domain.com" required><br>
         <label>Password:</label>
-        <input type="password" name="Password" value="123456"><br>
+        <input type="password" name="Password" value="123456" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
     </fieldset>
     <br>
     <input type="submit" class="btn btn-default" value="Add Student">
