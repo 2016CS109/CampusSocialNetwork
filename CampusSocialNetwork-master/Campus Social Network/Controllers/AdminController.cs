@@ -116,18 +116,119 @@ namespace Campus_Social_Network.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult UpdateProfile(AdminDb item)
+        {
+            using (entity)
+            {
+                var ProfilePicturePath = "abc";
+                var Password = "abc";
+                List<AdminDb> admin_list = entity.AdminDbs.ToList();
+                foreach (AdminDb obj in admin_list)
+                {
+                    ProfilePicturePath = obj.ProfilePicturePath;
+                    Password = obj.Password;
+                    entity.AdminDbs.Remove(obj);
+                    entity.SaveChanges();
+                }
+                item.ProfilePicturePath = ProfilePicturePath;
+                item.Password = Password;
+                entity.AdminDbs.Add(item);
+                entity.SaveChanges();
+                var result = "Successfully added";
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+        }
         public ActionResult ChangePassword()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult ChangePassword(AdminDb item)
+        {
+            using (entity)
+            {
+                var FirstName = "abc";
+                var LastName = "abc";
+                var EmailId = "abc";
+                var ContactNumber = "abc";
+                var ProiflePicturePath = "abc";
+                List<AdminDb> admin_temp_list = entity.AdminDbs.ToList();
+                foreach (AdminDb obj in admin_temp_list)
+                {
+                    FirstName = obj.FirstName;
+                    LastName = obj.LastName;
+                    EmailId = obj.EmailId;
+                    ContactNumber = obj.ContactNumber;
+                    ProiflePicturePath = obj.ProfilePicturePath;
+                    entity.AdminDbs.Remove(obj);
+                    entity.SaveChanges();
+                }
+                item.FirstName = FirstName;
+                item.LastName = LastName;
+                item.EmailId = EmailId;
+                item.ContactNumber = ContactNumber;
+                item.ProfilePicturePath = ProiflePicturePath;
+                entity.AdminDbs.Add(item);
+                entity.SaveChanges();
+                var result = "Successfully added";
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
         }
         public ActionResult ChangePicture()
         {
             return View();
         }
 
+        [HttpPost]
+        public ActionResult ChangePicture(AdminDb item)
+        {
+            using (entity)
+            {
+                var FirstName = "abc";
+                var LastName = "abc";
+                var EmailId = "abc";
+                var ContactNumber = "abc";
+                var Password = "abc";
+                List<AdminDb> admin_temp_list = entity.AdminDbs.ToList();
+                foreach (AdminDb obj in admin_temp_list)
+                {
+                    FirstName = obj.FirstName;
+                    LastName = obj.LastName;
+                    EmailId = obj.EmailId;
+                    ContactNumber = obj.ContactNumber;
+                    Password = obj.Password;
+                    entity.AdminDbs.Remove(obj);
+                    entity.SaveChanges();
+                }
+                item.FirstName = FirstName;
+                item.LastName = LastName;
+                item.EmailId = EmailId;
+                item.ContactNumber = ContactNumber;
+                item.Password = Password;
+                var folderPath = Server.MapPath("~/AppFile/AdminProfilePhoto");
+                System.IO.DirectoryInfo folderInfo = new DirectoryInfo(folderPath);
 
-
-
-
+                foreach (FileInfo file in folderInfo.GetFiles())
+                {
+                    file.Delete();
+                }
+                foreach (DirectoryInfo dir in folderInfo.GetDirectories())
+                {
+                    dir.Delete(true);
+                }
+                string fileName = Path.GetFileNameWithoutExtension(item.ProfilePic.FileName);
+                string extension = Path.GetExtension(item.ProfilePic.FileName);
+                fileName = fileName + DateTime.Now.ToString("yymmssff") + extension;
+                item.ProfilePicturePath = "~/AppFile/AdminProfilePhoto" + fileName;
+                item.ProfilePic.SaveAs(Path.Combine(Server.MapPath("~/AppFile/AdminProfilePhoto"), fileName));
+                entity.AdminDbs.Add(item);
+                entity.SaveChanges();
+                var result = "Successfully added";
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }
