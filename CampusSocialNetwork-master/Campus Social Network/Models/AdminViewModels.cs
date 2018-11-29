@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Campus_Social_Network.Models
 {
-    public class Add_Student
+    public class AddStudent
     {
         [Required]
         [Display(Name = "First Name")]

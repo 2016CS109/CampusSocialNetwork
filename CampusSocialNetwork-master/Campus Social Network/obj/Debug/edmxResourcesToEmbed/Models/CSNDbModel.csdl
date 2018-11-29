@@ -1,6 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CSNDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="AddClass">
+  <EntityType Name="AdminDb">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ProfilePicturePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ClassesDb">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -8,7 +20,7 @@
     <Property Name="ClassName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Name="ClassCapacity" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="AddStudent">
+  <EntityType Name="StudentsDb">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -22,9 +34,9 @@
     <Property Name="Class" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="ContactNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="AddTeacher">
+  <EntityType Name="TeachersDb">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -37,36 +49,10 @@
     <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="Admin">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="FirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="LastName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="ContactNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="AdminPassword">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="AdminPofilePhotoPath">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="AdminImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityContainer Name="CSNDBEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="AddClasses" EntityType="Self.AddClass" />
-    <EntitySet Name="AddStudents" EntityType="Self.AddStudent" />
-    <EntitySet Name="AddTeachers" EntityType="Self.AddTeacher" />
-    <EntitySet Name="Admins" EntityType="Self.Admin" />
-    <EntitySet Name="AdminPasswords" EntityType="Self.AdminPassword" />
-    <EntitySet Name="AdminPofilePhotoPaths" EntityType="Self.AdminPofilePhotoPath" />
+  <EntityContainer Name="CSNDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdminDbs" EntityType="Self.AdminDb" />
+    <EntitySet Name="ClassesDbs" EntityType="Self.ClassesDb" />
+    <EntitySet Name="StudentsDbs" EntityType="Self.StudentsDb" />
+    <EntitySet Name="TeachersDbs" EntityType="Self.TeachersDb" />
   </EntityContainer>
 </Schema>

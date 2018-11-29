@@ -1,18 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="CSNDBModelStoreContainer" CdmEntityContainer="CSNDBEntities">
-    <EntitySetMapping Name="AddClasses">
-      <EntityTypeMapping TypeName="CSNDBModel.AddClass">
-        <MappingFragment StoreEntitySet="AddClass">
+  <EntityContainerMapping StorageEntityContainer="CSNDBModelStoreContainer" CdmEntityContainer="CSNDBEntities1">
+    <EntitySetMapping Name="AdminDbs">
+      <EntityTypeMapping TypeName="CSNDBModel.AdminDb">
+        <MappingFragment StoreEntitySet="AdminDb">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="ProfilePicturePath" ColumnName="ProfilePicturePath" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClassesDbs">
+      <EntityTypeMapping TypeName="CSNDBModel.ClassesDb">
+        <MappingFragment StoreEntitySet="ClassesDb">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="ClassName" ColumnName="ClassName" />
           <ScalarProperty Name="ClassCapacity" ColumnName="ClassCapacity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="AddStudents">
-      <EntityTypeMapping TypeName="CSNDBModel.AddStudent">
-        <MappingFragment StoreEntitySet="AddStudent">
+    <EntitySetMapping Name="StudentsDbs">
+      <EntityTypeMapping TypeName="CSNDBModel.StudentsDb">
+        <MappingFragment StoreEntitySet="StudentsDb">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -27,9 +40,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="AddTeachers">
-      <EntityTypeMapping TypeName="CSNDBModel.AddTeacher">
-        <MappingFragment StoreEntitySet="AddTeacher">
+    <EntitySetMapping Name="TeachersDbs">
+      <EntityTypeMapping TypeName="CSNDBModel.TeachersDb">
+        <MappingFragment StoreEntitySet="TeachersDb">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -38,33 +51,6 @@
           <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Password" ColumnName="Password" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Admins">
-      <EntityTypeMapping TypeName="CSNDBModel.Admin">
-        <MappingFragment StoreEntitySet="Admin">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="AdminPasswords">
-      <EntityTypeMapping TypeName="CSNDBModel.AdminPassword">
-        <MappingFragment StoreEntitySet="AdminPassword">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="AdminPofilePhotoPaths">
-      <EntityTypeMapping TypeName="CSNDBModel.AdminPofilePhotoPath">
-        <MappingFragment StoreEntitySet="AdminPofilePhotoPath">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="AdminImagePath" ColumnName="AdminImagePath" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

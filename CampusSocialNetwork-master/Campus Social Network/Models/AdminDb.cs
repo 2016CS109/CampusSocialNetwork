@@ -12,10 +12,15 @@ namespace Campus_Social_Network.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class AdminPofilePhotoPath
+    public partial class AdminDb
     {
         public int Id { get; set; }
-        public string AdminImagePath { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string EmailId { get; set; }
+        public string ContactNumber { get; set; }
+        public string ProfilePicturePath { get; set; }
+        public string Password { get; set; }
         public System.Web.HttpPostedFileBase ProfilePic { get; set; }
     }
 }

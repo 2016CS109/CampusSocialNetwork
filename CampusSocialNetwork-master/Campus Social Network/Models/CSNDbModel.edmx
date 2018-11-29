@@ -5,7 +5,19 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="CSNDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="AddClass">
+        <EntityType Name="AdminDb">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="150" />
+          <Property Name="LastName" Type="varchar" MaxLength="150" />
+          <Property Name="EmailId" Type="varchar" MaxLength="150" />
+          <Property Name="ContactNumber" Type="varchar" MaxLength="150" />
+          <Property Name="ProfilePicturePath" Type="varchar(max)" />
+          <Property Name="Password" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="ClassesDb">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -13,7 +25,7 @@
           <Property Name="ClassName" Type="varchar" MaxLength="250" />
           <Property Name="ClassCapacity" Type="varchar" MaxLength="150" />
         </EntityType>
-        <EntityType Name="AddStudent">
+        <EntityType Name="StudentsDb">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -27,9 +39,9 @@
           <Property Name="Class" Type="varchar" MaxLength="150" />
           <Property Name="ContactNo" Type="varchar" MaxLength="150" />
           <Property Name="Email" Type="varchar" MaxLength="150" />
-          <Property Name="Password" Type="nchar" MaxLength="10" />
+          <Property Name="Password" Type="varchar" MaxLength="150" />
         </EntityType>
-        <EntityType Name="AddTeacher">
+        <EntityType Name="TeachersDb">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -42,44 +54,30 @@
           <Property Name="Email" Type="varchar" MaxLength="150" />
           <Property Name="Password" Type="varchar" MaxLength="150" />
         </EntityType>
-        <EntityType Name="Admin">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FirstName" Type="varchar" MaxLength="150" />
-          <Property Name="LastName" Type="varchar" MaxLength="150" />
-          <Property Name="Email" Type="varchar" MaxLength="150" />
-          <Property Name="ContactNo" Type="varchar" MaxLength="150" />
-        </EntityType>
-        <EntityType Name="AdminPassword">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Password" Type="varchar" MaxLength="150" />
-        </EntityType>
-        <EntityType Name="AdminPofilePhotoPath">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AdminImagePath" Type="varchar(max)" />
-        </EntityType>
         <EntityContainer Name="CSNDBModelStoreContainer">
-          <EntitySet Name="AddClass" EntityType="Self.AddClass" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AddStudent" EntityType="Self.AddStudent" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AddTeacher" EntityType="Self.AddTeacher" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AdminPassword" EntityType="Self.AdminPassword" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AdminPofilePhotoPath" EntityType="Self.AdminPofilePhotoPath" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AdminDb" EntityType="Self.AdminDb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClassesDb" EntityType="Self.ClassesDb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentsDb" EntityType="Self.StudentsDb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TeachersDb" EntityType="Self.TeachersDb" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CSNDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="AddClass">
+        <EntityType Name="AdminDb">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EmailId" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ContactNumber" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ProfilePicturePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ClassesDb">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -87,7 +85,7 @@
           <Property Name="ClassName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="ClassCapacity" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="AddStudent">
+        <EntityType Name="StudentsDb">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -101,9 +99,9 @@
           <Property Name="Class" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="ContactNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="AddTeacher">
+        <EntityType Name="TeachersDb">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -116,56 +114,43 @@
           <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="Admin">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="LastName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="ContactNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="AdminPassword">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="AdminPofilePhotoPath">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AdminImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityContainer Name="CSNDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="AddClasses" EntityType="Self.AddClass" />
-          <EntitySet Name="AddStudents" EntityType="Self.AddStudent" />
-          <EntitySet Name="AddTeachers" EntityType="Self.AddTeacher" />
-          <EntitySet Name="Admins" EntityType="Self.Admin" />
-          <EntitySet Name="AdminPasswords" EntityType="Self.AdminPassword" />
-          <EntitySet Name="AdminPofilePhotoPaths" EntityType="Self.AdminPofilePhotoPath" />
+        <EntityContainer Name="CSNDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AdminDbs" EntityType="Self.AdminDb" />
+          <EntitySet Name="ClassesDbs" EntityType="Self.ClassesDb" />
+          <EntitySet Name="StudentsDbs" EntityType="Self.StudentsDb" />
+          <EntitySet Name="TeachersDbs" EntityType="Self.TeachersDb" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CSNDBModelStoreContainer" CdmEntityContainer="CSNDBEntities">
-          <EntitySetMapping Name="AddClasses">
-            <EntityTypeMapping TypeName="CSNDBModel.AddClass">
-              <MappingFragment StoreEntitySet="AddClass">
+        <EntityContainerMapping StorageEntityContainer="CSNDBModelStoreContainer" CdmEntityContainer="CSNDBEntities1">
+          <EntitySetMapping Name="AdminDbs">
+            <EntityTypeMapping TypeName="CSNDBModel.AdminDb">
+              <MappingFragment StoreEntitySet="AdminDb">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="ProfilePicturePath" ColumnName="ProfilePicturePath" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClassesDbs">
+            <EntityTypeMapping TypeName="CSNDBModel.ClassesDb">
+              <MappingFragment StoreEntitySet="ClassesDb">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ClassName" ColumnName="ClassName" />
                 <ScalarProperty Name="ClassCapacity" ColumnName="ClassCapacity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="AddStudents">
-            <EntityTypeMapping TypeName="CSNDBModel.AddStudent">
-              <MappingFragment StoreEntitySet="AddStudent">
+          <EntitySetMapping Name="StudentsDbs">
+            <EntityTypeMapping TypeName="CSNDBModel.StudentsDb">
+              <MappingFragment StoreEntitySet="StudentsDb">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -180,9 +165,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="AddTeachers">
-            <EntityTypeMapping TypeName="CSNDBModel.AddTeacher">
-              <MappingFragment StoreEntitySet="AddTeacher">
+          <EntitySetMapping Name="TeachersDbs">
+            <EntityTypeMapping TypeName="CSNDBModel.TeachersDb">
+              <MappingFragment StoreEntitySet="TeachersDb">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -191,33 +176,6 @@
                 <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Admins">
-            <EntityTypeMapping TypeName="CSNDBModel.Admin">
-              <MappingFragment StoreEntitySet="Admin">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AdminPasswords">
-            <EntityTypeMapping TypeName="CSNDBModel.AdminPassword">
-              <MappingFragment StoreEntitySet="AdminPassword">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AdminPofilePhotoPaths">
-            <EntityTypeMapping TypeName="CSNDBModel.AdminPofilePhotoPath">
-              <MappingFragment StoreEntitySet="AdminPofilePhotoPath">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="AdminImagePath" ColumnName="AdminImagePath" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,29 +1,42 @@
-﻿@model IEnumerable<Campus_Social_Network.Models.AddClass>
-
+﻿
 @{
-    ViewBag.Title = "AllClasses";
-    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    ViewBag.Title = "All Classes";
 }
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ClassName)
+            Class ID
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ClassCapacity)
+            Class Name
         </th>
-        <th></th>
+        <th>
+            Capacity
+        </th>
+        
     </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClassName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClassCapacity)
-        </td>
-    </tr>
-}
-
+    @*
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dob)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    *@
 </table>

@@ -10,8 +10,7 @@ namespace Campus_Social_Network.Controllers
 {
     public class AdminController : Controller
     {
-        private CSNDBEntities entity = new CSNDBEntities();
-
+        private CSNDBEntities1 entity = new CSNDBEntities1();
         // GET: Admin
         public ActionResult Index()
         {
@@ -24,7 +23,7 @@ namespace Campus_Social_Network.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddStudent(AddStudent item)
+        public ActionResult AddStudent(StudentsDb item)
         {
             string fileName = Path.GetFileNameWithoutExtension(item.ProfilePic.FileName);
             string extension = Path.GetExtension(item.ProfilePic.FileName);
@@ -33,7 +32,7 @@ namespace Campus_Social_Network.Controllers
             item.ProfilePic.SaveAs(Path.Combine(Server.MapPath("~/AppFile/StudentsImagesByAdmin"), fileName));
             using (entity)
             {
-                entity.AddStudents.Add(item);
+                entity.StudentsDbs.Add(item);
                 entity.SaveChanges();
                 var result = "Successfully Added!";
                 return Json(result, JsonRequestBehavior.AllowGet);
@@ -46,7 +45,7 @@ namespace Campus_Social_Network.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddTeacher(AddTeacher item)
+        public ActionResult AddTeacher(TeachersDb item)
         {
             string fileName = Path.GetFileNameWithoutExtension(item.ProfilePic.FileName);
             string extension = Path.GetExtension(item.ProfilePic.FileName);
@@ -55,12 +54,13 @@ namespace Campus_Social_Network.Controllers
             item.ProfilePic.SaveAs(Path.Combine(Server.MapPath("~/AppFile/TeachersImagesByAdmin"), fileName));
             using (entity)
             {
-                entity.AddTeachers.Add(item);
+                entity.TeachersDbs.Add(item);
                 entity.SaveChanges();
                 var result = "Successfully Added!";
                 return Json(result, JsonRequestBehavior.AllowGet);
             }
         }
+
 
         public ActionResult AddClass()
         {
@@ -68,11 +68,11 @@ namespace Campus_Social_Network.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddClass(AddClass item)
+        public ActionResult AddClass(ClassesDb item)
         {
             using (entity)
             {
-                entity.AddClasses.Add(item);
+                entity.ClassesDbs.Add(item);
                 entity.SaveChanges();
                 var result = "Successfully Added!";
                 return Json(result, JsonRequestBehavior.AllowGet);
@@ -81,120 +81,30 @@ namespace Campus_Social_Network.Controllers
 
         public ActionResult AllStudents()
         {
-            List<AddStudent> add_student_temp_lst = new List<AddStudent>();
-            List<AddStudent> add_student_list = entity.AddStudents.ToList();
-            foreach (AddStudent obj in add_student_list)
-            {
-                add_student_temp_lst.Add(obj);
-            }
-            return View(add_student_temp_lst);
+            return View();
         }
 
         public ActionResult AllTeachers()
         {
-            List<AddTeacher> add_teacher_temp_lst = new List<AddTeacher>();
-            List<AddTeacher> add_teacher_list = entity.AddTeachers.ToList();
-            foreach (AddTeacher obj in add_teacher_list)
-            {
-                add_teacher_temp_lst.Add(obj);
-            }
-            return View(add_teacher_temp_lst);
+            return View();
         }
 
         public ActionResult AllClasses()
         {
-            List<AddClass> add_class_temp_lst = new List<AddClass>();
-            List<AddClass> add_class_list = entity.AddClasses.ToList();
-            foreach (AddClass obj in add_class_list)
-            {
-                add_class_temp_lst.Add(obj);
-            }
-            return View(add_class_temp_lst);
+            return View();
         }
 
         public ActionResult UpdateProfile()
         {
             return View();
         }
-
-        [HttpPost]
-        public ActionResult UpdateProfile(Admin item)
-        {
-            using (entity)
-            {
-                List<Admin> admin_list = entity.Admins.ToList();
-                foreach (Admin s in admin_list)
-                {
-                    entity.Admins.Remove(s);
-                    entity.SaveChanges();
-                }
-
-                entity.Admins.Add(item);
-                entity.SaveChanges();
-                var result = "Successfully added";
-                return Json(result, JsonRequestBehavior.AllowGet);
-            }
-        }
         public ActionResult ChangePassword()
         {
             return View();
         }
-
-        [HttpPost]
-        public ActionResult ChangePassword(AdminPassword item)
-        {
-            using (entity)
-            {
-                List<AdminPassword> admin_password_list = entity.AdminPasswords.ToList();
-                foreach (AdminPassword obj in admin_password_list)
-                {
-                    entity.AdminPasswords.Remove(obj);
-                    entity.SaveChanges();
-                }
-
-                entity.AdminPasswords.Add(item);
-                entity.SaveChanges();
-                var result = "Successfully added";
-                return Json(result, JsonRequestBehavior.AllowGet);
-            }
-        }
         public ActionResult ChangePicture()
         {
             return View();
-        }
-
-        [HttpPost]
-        public ActionResult ChangePicture(AdminPofilePhotoPath item)
-        {
-            using (entity)
-            {
-                List<AdminPofilePhotoPath> admin_Profile_Pic_lst = entity.AdminPofilePhotoPaths.ToList();
-                foreach (AdminPofilePhotoPath obj in admin_Profile_Pic_lst)
-                {
-                    entity.AdminPofilePhotoPaths.Remove(obj);
-                    entity.SaveChanges();
-                }
-                var folderPath = Server.MapPath("~/AppFile/AdminProfilePhoto");
-                System.IO.DirectoryInfo folderInfo = new DirectoryInfo(folderPath);
-
-                foreach (FileInfo file in folderInfo.GetFiles())
-                {
-                    file.Delete();
-                }
-                foreach (DirectoryInfo dir in folderInfo.GetDirectories())
-                {
-                    dir.Delete(true);
-                }
-                string fileName = Path.GetFileNameWithoutExtension(item.ProfilePic.FileName);
-                string extension = Path.GetExtension(item.ProfilePic.FileName);
-                fileName = fileName + DateTime.Now.ToString("yymmssff") + extension;
-                item.AdminImagePath = "~/AppFile/AdminProfilePhoto" + fileName;
-                item.ProfilePic.SaveAs(Path.Combine(Server.MapPath("~/AppFile/AdminProfilePhoto"), fileName));
-                entity.AdminPofilePhotoPaths.Add(item);
-                entity.SaveChanges();
-                var result = "Successfully added";
-                return Json(result, JsonRequestBehavior.AllowGet);
-            }
         }
 
 

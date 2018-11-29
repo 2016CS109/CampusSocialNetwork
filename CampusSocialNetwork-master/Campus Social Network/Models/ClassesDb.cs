@@ -12,7 +12,7 @@ namespace Campus_Social_Network.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class AddClass
+    public partial class ClassesDb
     {
         public int Id { get; set; }
         public string ClassName { get; set; }

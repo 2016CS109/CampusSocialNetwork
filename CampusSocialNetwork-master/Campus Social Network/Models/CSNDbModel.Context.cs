@@ -13,10 +13,10 @@ namespace Campus_Social_Network.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CSNDBEntities : DbContext
+    public partial class CSNDBEntities1 : DbContext
     {
-        public CSNDBEntities()
-            : base("name=CSNDBEntities")
+        public CSNDBEntities1()
+            : base("name=CSNDBEntities1")
         {
         }
     
@@ -25,11 +25,9 @@ namespace Campus_Social_Network.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AddClass> AddClasses { get; set; }
-        public virtual DbSet<AddStudent> AddStudents { get; set; }
-        public virtual DbSet<AddTeacher> AddTeachers { get; set; }
-        public virtual DbSet<Admin> Admins { get; set; }
-        public virtual DbSet<AdminPassword> AdminPasswords { get; set; }
-        public virtual DbSet<AdminPofilePhotoPath> AdminPofilePhotoPaths { get; set; }
+        public virtual DbSet<AdminDb> AdminDbs { get; set; }
+        public virtual DbSet<ClassesDb> ClassesDbs { get; set; }
+        public virtual DbSet<StudentsDb> StudentsDbs { get; set; }
+        public virtual DbSet<TeachersDb> TeachersDbs { get; set; }
     }
 }

@@ -206,25 +206,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AddClass.cs">
-      <DependentUpon>CSNDbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AddStudent.cs">
-      <DependentUpon>CSNDbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AddTeacher.cs">
-      <DependentUpon>CSNDbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Admin.cs">
-      <DependentUpon>CSNDbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AdminPassword.cs">
-      <DependentUpon>CSNDbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AdminPofilePhotoPath.cs">
+    <Compile Include="Models\AdminDb.cs">
       <DependentUpon>CSNDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminViewModels.cs" />
+    <Compile Include="Models\ClassesDb.cs">
+      <DependentUpon>CSNDbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CSNDbModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -242,6 +230,12 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\StudentsDb.cs">
+      <DependentUpon>CSNDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TeachersDb.cs">
+      <DependentUpon>CSNDbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -330,6 +324,7 @@
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout_Student.cshtml" />
     <Content Include="Views\Shared\_Layout_Admin.cshtml" />
     <Content Include="Views\Shared\_Layout_Teacher.cshtml" />
@@ -337,6 +332,9 @@
     <Content Include="Views\Admin\AddStudent.cshtml" />
     <Content Include="Views\Admin\AddTeacher.cshtml" />
     <Content Include="Views\Admin\AddClass.cshtml" />
+    <Content Include="Views\Admin\AllStudents.cshtml" />
+    <Content Include="Views\Admin\AllTeachers.cshtml" />
+    <Content Include="Views\Admin\AllClasses.cshtml" />
     <Content Include="Views\Admin\UpdateProfile.cshtml" />
     <Content Include="Views\Student\Newsfeed.cshtml" />
     <Content Include="Views\Student\StudentProfile.cshtml" />
@@ -347,10 +345,6 @@
     <Content Include="Views\Student\ChangePicture.cshtml" />
     <Content Include="Views\Admin\ChangePassword.cshtml" />
     <Content Include="Views\Admin\ChangePicture.cshtml" />
-    <Content Include="Views\Admin\AllStudents.cshtml" />
-    <Content Include="Views\Admin\AllTeachers.cshtml" />
-    <Content Include="Views\Admin\AllClasses.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFile\AdminProfilePhoto\" />
