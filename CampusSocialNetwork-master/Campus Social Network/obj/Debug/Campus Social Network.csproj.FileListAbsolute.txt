@@ -244,3 +244,85 @@ D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_C
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\109_Part2\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.csprojResolveAssemblyReference.cache
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\109_Part2\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.dll
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\109_Part2\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.pdb
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\ApplicationInsights.config
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\csc.exe
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\System.Collections.Immutable.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\System.Reflection.Metadata.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\vbc.exe
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\VBCSCompiler.exe
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\VBCSCompiler.exe.config
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Campus Social Network.dll.config
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Campus Social Network.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Campus Social Network.pdb
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Antlr3.Runtime.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.SqlServer.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.Agent.Intercept.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.DependencyCollector.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.Web.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.WindowsServer.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.ApplicationInsights.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Core.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Cookies.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Facebook.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Google.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.OAuth.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Twitter.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Web.Infrastructure.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Newtonsoft.Json.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Owin.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Helpers.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Mvc.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Optimization.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Razor.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Deployment.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Razor.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\WebGrease.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.DependencyCollector.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.Web.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.WindowsServer.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.ApplicationInsights.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Helpers.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Mvc.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Optimization.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Razor.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Deployment.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Razor.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Antlr3.Runtime.pdb
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Newtonsoft.Json.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.SqlServer.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Core.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Facebook.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Cookies.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.OAuth.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Google.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Twitter.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.csprojResolveAssemblyReference.cache
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.dll
+D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\Talit\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.pdb
