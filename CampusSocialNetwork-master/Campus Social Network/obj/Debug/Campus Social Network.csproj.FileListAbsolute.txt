@@ -489,3 +489,180 @@ D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_C
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\106_Part2\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Google.xml
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\106_Part2\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Twitter.xml
 D:\UET-BS-CS\5th Sem\Software Engineering\Lab\Random_Work_Of_CSN\Admin_Work_Of_CSN\106_Part2\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\ApplicationInsights.config
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\csc.exe
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\System.Collections.Immutable.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\System.Reflection.Metadata.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\vbc.exe
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\VBCSCompiler.exe
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\VBCSCompiler.exe.config
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Campus Social Network.dll.config
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Campus Social Network.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Campus Social Network.pdb
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Antlr3.Runtime.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.SqlServer.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.Agent.Intercept.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.DependencyCollector.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.Web.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.WindowsServer.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.ApplicationInsights.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Core.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Cookies.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Facebook.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Google.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.OAuth.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Twitter.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Web.Infrastructure.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Newtonsoft.Json.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Owin.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Helpers.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Mvc.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Optimization.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Razor.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Deployment.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Razor.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\WebGrease.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.DependencyCollector.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.Web.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.WindowsServer.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.ApplicationInsights.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Helpers.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Mvc.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Optimization.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Razor.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Deployment.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Razor.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Antlr3.Runtime.pdb
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Newtonsoft.Json.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.SqlServer.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Core.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Facebook.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Cookies.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.OAuth.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Google.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Twitter.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.csprojResolveAssemblyReference.cache
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.dll
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.pdb
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.initialModel.resources
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.csproj.GenerateResource.Cache
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.initialModel1.resources
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.InitialModel2.resources
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.dataAnnotations.resources
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.dataAnnotations1.resources
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\ApplicationInsights.config
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\csc.exe
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\System.Collections.Immutable.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\System.Reflection.Metadata.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\vbc.exe
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\VBCSCompiler.exe
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\roslyn\VBCSCompiler.exe.config
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Campus Social Network.dll.config
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Campus Social Network.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Campus Social Network.pdb
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Antlr3.Runtime.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.SqlServer.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.Agent.Intercept.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.DependencyCollector.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.Web.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.WindowsServer.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.ApplicationInsights.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Core.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Cookies.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Facebook.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Google.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.OAuth.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Twitter.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Web.Infrastructure.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Newtonsoft.Json.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Owin.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Helpers.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Mvc.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Optimization.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Razor.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Deployment.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Razor.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\WebGrease.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.DependencyCollector.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.Web.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AI.WindowsServer.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.ApplicationInsights.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Helpers.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Mvc.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Optimization.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.Razor.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Deployment.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\System.Web.WebPages.Razor.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Antlr3.Runtime.pdb
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Newtonsoft.Json.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\EntityFramework.SqlServer.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Core.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Facebook.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Cookies.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.OAuth.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Google.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Twitter.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.csprojResolveAssemblyReference.cache
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.initialModel.resources
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.initialModel1.resources
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.InitialModel2.resources
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.dataAnnotations.resources
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.dataAnnotations1.resources
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.csproj.GenerateResource.Cache
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.dll
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.pdb
+E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.update.resources

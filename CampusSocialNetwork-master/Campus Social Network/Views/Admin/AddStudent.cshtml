@@ -1,62 +1,124 @@
 ﻿@{
     ViewBag.Title = "Add Student";
 }
+@model Campus_Social_Network.Models.AddStudentViewModel
 
-
-<form id="AddStudent" name="AddStudent" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
-    <div class="form_description">
-        <p>Fill up below form to add a new student.</p>
+@using (Html.BeginForm("AddStudent", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <div class="form_description">
+            <p>Fill up below form to add a new student.</p>
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+        </div>
+        <hr />
+        <fieldset>
+            <div class="form-group">
+                <label>First Name*</label>
+                @Html.TextBoxFor(m => m.firstName, new { placeholder = "Enter First Name..." })
+                @Html.ValidationMessageFor(m => m.firstName)
+            </div>
+            <div class="form-group">
+                <label>Last Name*</label>
+                @Html.TextBoxFor(m => m.lastName, new { placeholder = "Enter Last Name..." })
+                @Html.ValidationMessageFor(m => m.lastName)
+            </div>
+            <div class="form-group">
+                <label>Date of Birth</label>
+                @Html.TextBoxFor(m => m.dateOfBirth, new { @class = "datetime", data_val = "false", placeholder = "Select Date..." })
+                @Html.ValidationMessageFor(m => m.dateOfBirth)
+            </div>
+            <div class="form-group">
+                <label>CNIC Number*</label>
+                @Html.TextBoxFor(m => m.cnic, new { placeholder = "Enter CNIC Number..." })
+                @Html.ValidationMessageFor(m => m.cnic)
+            </div>
+            <div class="form-group">
+                <label>Registration Number*</label>
+                @Html.TextBoxFor(m => m.registrationNumber, new { placeholder = "Enter Registration Number..." })
+                @Html.ValidationMessageFor(m => m.registrationNumber)
+            </div>
+            <div class="form-group">
+                <label>Class*</label>
+                @Html.DropDownListFor(m => m.classId, new SelectList(Model.allClasses, "Id", "Name"), "Select Class")
+                @Html.ValidationMessageFor(m => m.classId)
+            </div>
+            <div class="form-group">
+                <label>Contact Number</label>
+                @Html.TextBoxFor(m => m.PhoneNumber, new { placeholder = "Enter Phone Number..." })
+                @Html.ValidationMessageFor(m => m.PhoneNumber)
+            </div>
+            <div class="form-group">
+                <label>Email*</label>
+                @Html.TextBoxFor(m => m.Email, new { placeholder = "example@domain.com" })
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+            <div class="form-group">
+                <label>Password*</label>
+                @Html.PasswordFor(m => m.Password, new { placeholder = "Create Password..." })
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+            <div class="form-group">
+                <label>Profile Picture</label>
+                <input type="file" name="UserImage" required>
+            </div>
+        </fieldset>
+        <hr />
+        <div class="form-group">
+            <div>
+                <input type="submit" value="Add Student" class="btn btn-primary" />
+            </div>
+        </div>
     </div>
-    <fieldset>
-        <label>First Name:</label>
-        <input type="text" name="FirstName" value="" placeholder="Enter First Name..." required><br>
-        <label>Last Name:</label>
-        <input type="text" name="LastName" value="" placeholder="Enter Last Name..." required><br>
-        <label>Date of Birth:</label>
-        <input type="date" name="DateOfBirth" value="" required><br><br />
-        <label>CNIC Number:</label>
-        <input type="text" name="CNICNo" value="" required pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}" title="XXXXX-XXXXXXX-X"><br>
-        <label>Profile Picture:</label>
-        <input type="file" name="ProfilePic" required> <br>
-    </fieldset>
-    <fieldset>
-        <label>Registration Number:</label>
-        <input type="text" name="RollNo" value="" placeholder="YYYY-XX-999" required pattern="[0-9]{4}-[A-Z]{3}-[0-9]{3}" title="XXXX-ABC-XXX"><br>
-        <label>Class:</label>
-        <select name="Class">
-            <option value="2016-CSE-A">2016-CSE-A</option>
-            <option value="2016-CSE-B">2016-CSE-B</option>
-            <option value="2016-CSE-C">2016-CSE-C</option>
-            <option value="2016-CSE-D">2016-CSE-D</option>
-        </select><br />
-        <label>Contact Number:</label>
-        <input type="text" name="ContactNo" value="" required placeholder="Enter Contact Number of the Student..." pattern="[0-4]{2}[0-9]{9}" title="Phone number with 0-4 and remaing 9 digit with 0-9"><br>
-    </fieldset>
-    <fieldset>
-        <label>Email:</label>
-        <input type="email" name="Email" value="" placeholder="abc@domain.com" required><br>
-        <label>Password:</label>
-        <input type="password" name="Password" value="123456" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
-    </fieldset>
-    <br>
-    <input type="submit" class="btn btn-default" value="Add Student">
-</form>
-<script>
-    function AjaxPost(formData) {
-        var ajaxConfig = {
-            type: "post",
-            url: "/Admin/AddStudent",
-            data: new FormData(formData),
-            success: function (result) {
-                alert(result);
-                window.location.href = "/Admin/AddStudent"
+    <div id="dialog-message">
+        <p>
+             @TempData["msg"]!
+            </p>
+        </div>
+}
+
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @*<script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>*@
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#dialog-message").dialog({
+                autoOpen: false,
+                resizable: false,
+                height: 170,
+                width: 350,
+                modal: true,
+                draggable: false,
+                show: { effect: 'drop', direction: "up" },
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+                },
+                buttons: {
+                    Ok: function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            if ('@TempData["msg"]' != "") {
+                $("#dialog-message").dialog('open');
             }
-        }
-        if ($(formData).attr('enctype') == "multipart/form-data") {
-            ajaxConfig["contentType"] = false;
-            ajaxConfig["processData"] = false;
-        }
-        $.ajax(ajaxConfig);
-        return false;
+        });
+        $(function () {
+            $(".datetime").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: "yy-mm-dd",
+                yearRange: "1900:2099"
+            })
+        });
+    </script>
     }
-</script>
+
+
+

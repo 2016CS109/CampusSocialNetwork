@@ -1,31 +1,16 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Change Picture";
 }
-<form id="ChangePicture" name="ChangePicture" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
+
+@using (Html.BeginForm("ChangePicture", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
     <fieldset>
         <label>Update Profile Picture:</label>
-        <input type="file" name="ProfilePic" required><br>
+        <input type="file" name="userImage" accept="image/*" required><br>
     </fieldset>
-    <input type="submit" class="btn btn-default" value="Update">
-</form>
+    <input type="submit" class="btn btn-primary" value="Update">
+}
 
-<script>
-    function AjaxPost(formData) {
-        var ajaxConfig = {
-            type: "post",
-            url: "/Admin/ChangePicture",
-            data: new FormData(formData),
-            success: function (result) {
-                alert(result);
-                window.location.href = "/Admin/ChangePicture"
-            }
-        }
-        if ($(formData).attr('enctype') == "multipart/form-data") {
-            ajaxConfig["contentType"] = false;
-            ajaxConfig["processData"] = false;
-        }
-        $.ajax(ajaxConfig);
-        return false;
-    }
-</script>
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

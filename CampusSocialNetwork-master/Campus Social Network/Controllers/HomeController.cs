@@ -4,12 +4,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity.Owin;
+using System.Web.Security;
+using Microsoft.Owin.Security;
+using Microsoft.AspNet.Identity;
 
 namespace Campus_Social_Network.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
-        private CSNDBEntities1 entity = new CSNDBEntities1();
+        private ApplicationSignInManager _signInManager;
+        public HomeController()
+        {
+        }
+
+        public HomeController(ApplicationSignInManager signInManager)
+        {
+            SignInManager = signInManager;
+        }
+
+        public ApplicationSignInManager SignInManager
+        {
+            get
+            {
+                return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
+            }
+            private set
+            {
+                _signInManager = value;
+            }
+        }
         public ActionResult Index()
         {
             return View();
@@ -29,29 +55,54 @@ namespace Campus_Social_Network.Controllers
             return View();
         }
 
-        public ActionResult Login()
+        //
+        // GET: /Account/Login
+        [AllowAnonymous]
+        public ActionResult Login(string returnUrl)
         {
+            ViewBag.ReturnUrl = returnUrl;
             return View();
         }
 
         [HttpPost]
-        public ActionResult Login(LoginViewModel item)
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            var UserName = "abc";
-            var Password = "abc";
-            List<AdminDb> admin_temp_lst = new List<AdminDb>();
-            admin_temp_lst = entity.AdminDbs.ToList();
-            foreach (AdminDb obj in admin_temp_lst)
+            if (!ModelState.IsValid)
             {
-                UserName = obj.EmailId;
-                Password = obj.Password;
-                break;
+                return View(model);
             }
-            if (UserName == item.Email && Password == item.Password)
+
+            // This doesn't count login failures towards account lockout
+            // To enable password failures to trigger account lockout, change to shouldLockout: true
+            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            switch (result)
+            {
+                case SignInStatus.Success:
+                    return RedirectToLocal(returnUrl, model.Email);
+                case SignInStatus.Failure:
+                default:
+                    ModelState.AddModelError("", "Invalid login attempt.");
+                    return View(model);
+            }
+        }
+
+        private ActionResult RedirectToLocal(string returnUrl, string email)
+        {
+            var userManager = Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var roles = userManager.GetRoles(User.Identity.GetUserId());
+            if (Url.IsLocalUrl(returnUrl))
+            {
+                return Redirect(returnUrl);
+            }
+            if (roles.Contains("Admin"))
             {
                 return RedirectToAction("Index", "Admin");
             }
-            return View();
+            else
+            {
+                return RedirectToAction("Newsfeed", "Student");
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Campus_Social_Network.Models.TeachersDb>
+﻿@model IEnumerable<Campus_Social_Network.Models.Teacher>
 
 @{
     ViewBag.Title = "AllTeachers";
@@ -7,48 +7,49 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
+            Id
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            First Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Designation)
+            Last Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ContactNo)
+            Designation
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
+            Contact Number
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Password)
+            Email
         </th>
-        <th></th>
+        <th>
+            Ratings
+        </th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
+                @Html.DisplayFor(modelItem => item.id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LastName)
+                @Html.DisplayFor(modelItem => item.firstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Designation)
+                @Html.DisplayFor(modelItem => item.lastName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ContactNo)
+                @Html.DisplayFor(modelItem => item.designation)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.contactNumber)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Password)
+                @Html.DisplayFor(modelItem => item.emailId)
             </td>
         </tr>
     }
-
 </table>

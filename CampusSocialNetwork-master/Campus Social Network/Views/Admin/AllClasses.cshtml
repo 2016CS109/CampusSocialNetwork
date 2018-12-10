@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Campus_Social_Network.Models.ClassesDb>
+﻿@model IEnumerable<Campus_Social_Network.Models.Class>
 
 @{
     ViewBag.Title = "AllClasses";
@@ -7,24 +7,25 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ClassName)
+            Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ClassCapacity)
+            Capacity
         </th>
-        <th></th>
+        <th>
+            Number of Registered
+        </th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ClassName)
+                @Html.DisplayFor(modelItem => item.name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ClassCapacity)
+                @Html.DisplayFor(modelItem => item.capacity)
             </td>
         </tr>
     }
-
 </table>

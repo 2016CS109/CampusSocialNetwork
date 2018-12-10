@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Campus_Social_Network.Controllers
 {
+    [Authorize(Roles = "Student")]
     public class StudentController : Controller
     {
         // GET: Student

@@ -22,3 +22,20 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.input-validation-error	{
+    border:	2px	solid red;
+    
+}
+
+.field-validation-error	{
+    color: red;
+}
+
+.ui-datepicker-calendar {
+    background-color: black;
+}
+
+.ui-datepicker-header {
+    background-color: black;
+}

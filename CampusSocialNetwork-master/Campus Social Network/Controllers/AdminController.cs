@@ -5,12 +5,41 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
 
 namespace Campus_Social_Network.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
-        private CSNDBEntities1 entity = new CSNDBEntities1();
+        private ApplicationUserManager _userManager;
+        private ApplicationDbContext db = new ApplicationDbContext();
+
+        public AdminController()
+        {
+        }
+
+        public AdminController(ApplicationUserManager userManager)
+        {
+            UserManager = userManager;
+        }
+
+
+        public ApplicationUserManager UserManager
+        {
+            get
+            {
+                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            }
+            private set
+            {
+                _userManager = value;
+            }
+        }
+
         // GET: Admin
         public ActionResult Index()
         {
@@ -19,24 +48,53 @@ namespace Campus_Social_Network.Controllers
 
         public ActionResult AddStudent()
         {
-            return View();
+            var classes = db.Classes.ToList();
+            var viewModel = new AddStudentViewModel
+            {
+                allClasses = classes.ToList()
+            };
+            return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult AddStudent(StudentsDb item)
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> AddStudent(AddStudentViewModel model)
         {
-            string fileName = Path.GetFileNameWithoutExtension(item.ProfilePic.FileName);
-            string extension = Path.GetExtension(item.ProfilePic.FileName);
-            fileName = fileName + DateTime.Now.ToString("yymmssff") + extension;
-            item.ImagePath = "~/AppFile/StudentsImagesByAdmin" + fileName;
-            item.ProfilePic.SaveAs(Path.Combine(Server.MapPath("~/AppFile/StudentsImagesByAdmin"), fileName));
-            using (entity)
+            if (IsRegistrationNumberExists(model.registrationNumber))
             {
-                entity.StudentsDbs.Add(item);
-                entity.SaveChanges();
-                var result = "Successfully Added!";
-                return Json(result, JsonRequestBehavior.AllowGet);
+                ModelState.AddModelError("registrationNumber", "This registration number already exists.");
+                model.allClasses = db.Classes.ToList();
+                return View(model);
             }
+
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser { UserName = model.Email, firstName = model.firstName,
+                    lastName = model.lastName, dateOfBirth = model.dateOfBirth, Email = model.Email,
+                    registrationNumber = model.registrationNumber, cnic = model.cnic,
+                    PhoneNumber = model.PhoneNumber, classId = model.classId };
+                var result = await UserManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    await UserManager.AddToRoleAsync(user.Id, "Student");
+                    //Extract Image File Name.
+                    string fileName = user.registrationNumber + Path.GetExtension(model.UserImage.FileName);
+
+                    //Set the Image File Path.
+                    string filePath = "~/UserImages/" + fileName;
+
+                    //Save the Image File in Folder.
+                    model.UserImage.SaveAs(Server.MapPath(filePath));
+
+                    TempData["Msg"] = "Successfully Added";
+                    return RedirectToAction("AddStudent");
+                }
+                AddErrors(result);
+            }
+
+            // If we got this far, something failed, redisplay form
+            model.allClasses = db.Classes.ToList();
+            return View(model);
         }
 
         public ActionResult AddTeacher()
@@ -45,137 +103,109 @@ namespace Campus_Social_Network.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddTeacher(TeachersDb item)
+        public ActionResult AddTeacher(Teacher item)
         {
-            string fileName = Path.GetFileNameWithoutExtension(item.ProfilePic.FileName);
-            string extension = Path.GetExtension(item.ProfilePic.FileName);
-            fileName = fileName + DateTime.Now.ToString("yymmssff") + extension;
-            item.ImagePath = "~/AppFile/TeachersImagesByAdmin" + fileName;
-            item.ProfilePic.SaveAs(Path.Combine(Server.MapPath("~/AppFile/TeachersImagesByAdmin"), fileName));
-            using (entity)
+            if (IsTeacherExists(item.emailId))
             {
-                entity.TeachersDbs.Add(item);
-                entity.SaveChanges();
-                var result = "Successfully Added!";
-                return Json(result, JsonRequestBehavior.AllowGet);
+                ModelState.AddModelError("emailId", "This email id already exists.");
+                Teacher model = new Teacher
+                {
+                    emailId = item.emailId
+                };
+                return View("AddTeacher", model);
+            }
+            using (db)
+            {
+                db.Teachers.Add(item);
+                db.SaveChanges();
+                TempData["Msg"] = "Successfully Added";
+                return RedirectToAction("AddTeacher");
             }
         }
-
-
+       
         public ActionResult AddClass()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddClass(ClassesDb item)
+        public ActionResult AddClass(Class item)
         {
-            using (entity)
+            if(IsClassExists(item.name))
             {
-                entity.ClassesDbs.Add(item);
-                entity.SaveChanges();
-                var result = "Successfully Added!";
-                return Json(result, JsonRequestBehavior.AllowGet);
+                ModelState.AddModelError("name", "This name already exists.");
+                Class model = new Class
+                {
+                    name = item.name
+                };
+                return View("AddClass", model);
+            }
+            using (db)
+            {
+                db.Classes.Add(item);
+                db.SaveChanges();
+                TempData["Msg"] = "Successfully Added";
+                return RedirectToAction("AddClass");
             }
         }
 
-        public ActionResult AllStudents()
-        {
-            List<StudentsDb> add_student_temp_lst = new List<StudentsDb>();
-            List<StudentsDb> add_student_list = entity.StudentsDbs.ToList();
-            foreach (StudentsDb obj in add_student_list)
-            {
-                add_student_temp_lst.Add(obj);
-            }
-            return View(add_student_temp_lst);
+        public ActionResult AllStudents() {
+            List<ApplicationUser> allStudents = db.Users.ToList();
+            return View(allStudents);
         }
 
         public ActionResult AllTeachers()
         {
-            List<TeachersDb> add_teacher_temp_lst = new List<TeachersDb>();
-            List<TeachersDb> add_teacher_list = entity.TeachersDbs.ToList();
-            foreach (TeachersDb obj in add_teacher_list)
-            {
-                add_teacher_temp_lst.Add(obj);
-            }
-            return View(add_teacher_temp_lst);
+            List<Teacher> allTeachers = db.Teachers.ToList();
+            return View(allTeachers);
         }
 
         public ActionResult AllClasses()
         {
-            List<ClassesDb> add_class_temp_lst = new List<ClassesDb>();
-            List<ClassesDb> add_class_list = entity.ClassesDbs.ToList();
-            foreach (ClassesDb obj in add_class_list)
-            {
-                add_class_temp_lst.Add(obj);
-            }
-            return View(add_class_temp_lst);
+            List<Class> allClasses = db.Classes.ToList();
+            return View(allClasses);
         }
 
-        public ActionResult UpdateProfile()
+        public ActionResult AccountSettings()
         {
-            return View();
+
+            var admin = db.Users.Single(c => c.UserName == User.Identity.Name);
+            return View(admin);
         }
 
         [HttpPost]
-        public ActionResult UpdateProfile(AdminDb item)
+        public ActionResult AccountSettings(ApplicationUser model)
         {
-            using (entity)
-            {
-                var ProfilePicturePath = "abc";
-                var Password = "abc";
-                List<AdminDb> admin_list = entity.AdminDbs.ToList();
-                foreach (AdminDb obj in admin_list)
-                {
-                    ProfilePicturePath = obj.ProfilePicturePath;
-                    Password = obj.Password;
-                    entity.AdminDbs.Remove(obj);
-                    entity.SaveChanges();
-                }
-                item.ProfilePicturePath = ProfilePicturePath;
-                item.Password = Password;
-                entity.AdminDbs.Add(item);
-                entity.SaveChanges();
-                var result = "Successfully added";
-                return Json(result, JsonRequestBehavior.AllowGet);
-            }
+            var admin = db.Users.Single(c => c.UserName == User.Identity.Name);
+            admin.firstName = model.firstName;
+            admin.lastName = model.lastName;
+            admin.Email = model.Email;
+            admin.PhoneNumber = model.PhoneNumber;
+            admin.UserName = model.Email;
+            db.SaveChanges();
+            return View("AccountSettings");
         }
+
         public ActionResult ChangePassword()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult ChangePassword(AdminDb item)
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
         {
-            using (entity)
+            if (!ModelState.IsValid)
             {
-                var FirstName = "abc";
-                var LastName = "abc";
-                var EmailId = "abc";
-                var ContactNumber = "abc";
-                var ProiflePicturePath = "abc";
-                List<AdminDb> admin_temp_list = entity.AdminDbs.ToList();
-                foreach (AdminDb obj in admin_temp_list)
-                {
-                    FirstName = obj.FirstName;
-                    LastName = obj.LastName;
-                    EmailId = obj.EmailId;
-                    ContactNumber = obj.ContactNumber;
-                    ProiflePicturePath = obj.ProfilePicturePath;
-                    entity.AdminDbs.Remove(obj);
-                    entity.SaveChanges();
-                }
-                item.FirstName = FirstName;
-                item.LastName = LastName;
-                item.EmailId = EmailId;
-                item.ContactNumber = ContactNumber;
-                item.ProfilePicturePath = ProiflePicturePath;
-                entity.AdminDbs.Add(item);
-                entity.SaveChanges();
-                var result = "Successfully added";
-                return Json(result, JsonRequestBehavior.AllowGet);
+                return View(model);
             }
+            var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
+            if (result.Succeeded)
+            {
+                return View("Index");
+            }
+            AddErrors(result);
+            return View(model);
         }
         public ActionResult ChangePicture()
         {
@@ -183,51 +213,100 @@ namespace Campus_Social_Network.Controllers
         }
 
         [HttpPost]
-        public ActionResult ChangePicture(AdminDb item)
+        public ActionResult ChangePicture(HttpPostedFileBase userImage)
         {
-            using (entity)
+            var folderPath = Server.MapPath("~/UserImages");
+            DirectoryInfo folderInfo = new DirectoryInfo(folderPath);
+            foreach (FileInfo file in folderInfo.GetFiles())
             {
-                var FirstName = "abc";
-                var LastName = "abc";
-                var EmailId = "abc";
-                var ContactNumber = "abc";
-                var Password = "abc";
-                List<AdminDb> admin_temp_list = entity.AdminDbs.ToList();
-                foreach (AdminDb obj in admin_temp_list)
-                {
-                    FirstName = obj.FirstName;
-                    LastName = obj.LastName;
-                    EmailId = obj.EmailId;
-                    ContactNumber = obj.ContactNumber;
-                    Password = obj.Password;
-                    entity.AdminDbs.Remove(obj);
-                    entity.SaveChanges();
-                }
-                item.FirstName = FirstName;
-                item.LastName = LastName;
-                item.EmailId = EmailId;
-                item.ContactNumber = ContactNumber;
-                item.Password = Password;
-                var folderPath = Server.MapPath("~/AppFile/AdminProfilePhoto");
-                System.IO.DirectoryInfo folderInfo = new DirectoryInfo(folderPath);
-
-                foreach (FileInfo file in folderInfo.GetFiles())
+                if (file.Name == "Admin.png")
                 {
                     file.Delete();
                 }
-                foreach (DirectoryInfo dir in folderInfo.GetDirectories())
+            }
+            string fileName = "Admin.png";
+
+            //Set the Image File Path.
+            string filePath = "~/UserImages/" + fileName;
+
+            //Save the Image File in Folder.
+            userImage.SaveAs(Server.MapPath(filePath));
+            return View("ChangePicture");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Logout()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
+        }
+
+        private IAuthenticationManager AuthenticationManager
+        {
+            get
+            {
+                return HttpContext.GetOwinContext().Authentication;
+            }
+        }
+
+        private bool IsClassExists(string name)
+        {
+            List<Class> allClasses = db.Classes.ToList();
+            foreach(Class c in allClasses)
+            {
+                if(c.name == name)
                 {
-                    dir.Delete(true);
+                    return true;
                 }
-                string fileName = Path.GetFileNameWithoutExtension(item.ProfilePic.FileName);
-                string extension = Path.GetExtension(item.ProfilePic.FileName);
-                fileName = fileName + DateTime.Now.ToString("yymmssff") + extension;
-                item.ProfilePicturePath = "~/AppFile/AdminProfilePhoto" + fileName;
-                item.ProfilePic.SaveAs(Path.Combine(Server.MapPath("~/AppFile/AdminProfilePhoto"), fileName));
-                entity.AdminDbs.Add(item);
-                entity.SaveChanges();
-                var result = "Successfully added";
-                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+            return false;
+        }
+
+        private bool IsTeacherExists(string email)
+        {
+            List<Teacher> allTeachers = db.Teachers.ToList();
+            foreach (Teacher t in allTeachers)
+            {
+                if (t.emailId == email)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private bool IsRegistrationNumberExists(string registrationNumber)
+        {
+            List<ApplicationUser> allStudents = db.Users.ToList();
+            foreach (ApplicationUser s in allStudents)
+            {
+                if (s.registrationNumber == registrationNumber)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private bool IsStudentEmailExists(string email)
+        {
+            List<ApplicationUser> allStudents = db.Users.ToList();
+            foreach (ApplicationUser s in allStudents)
+            {
+                if (s.Email == email)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void AddErrors(IdentityResult result)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error);
             }
         }
     }

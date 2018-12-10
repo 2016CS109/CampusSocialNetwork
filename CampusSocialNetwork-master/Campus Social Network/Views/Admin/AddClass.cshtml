@@ -3,36 +3,66 @@
 }
 
 
-<form id="AddClass" name="AddClass" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
-    <div class="form_description">
-        <p>Fill up below form to add a new Class.</p>
-    </div>
-    <fieldset>
-        <label>Class Name:</label>
-        <input type="text" name="ClassName" value="" placeholder="Enter Name of the Class..." required><br>
-        <label>Capacity:</label>
-        <input type="text" name="ClassCapacity" value="" placeholder="Enter Capacity of the Class..." required pattern="[0-9]{2}" title="XX"><br>
-    </fieldset>
-    <br>
-    <input type="submit" class="btn btn-default" value="Add Class">
-</form>
 
-<script>
-    function AjaxPost(formData) {
-        var ajaxConfig = {
-            type: "post",
-            url: "/Admin/AddClass",
-            data: new FormData(formData),
-            success: function (result) {
-                alert(result);
-                window.location.href = "/Admin/AddClass"
+@model Campus_Social_Network.Models.Class
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <div class="form_description">
+            <p>Fill up below form to add a new class.</p>
+        </div>
+        <fieldset>
+            <div class="form-group">
+                <label>Name*</label>
+                @Html.TextBoxFor(m => m.name, new { placeholder = "Enter Name..." })
+                @Html.ValidationMessageFor(m => m.name)
+            </div>
+            <div class="form-group">
+                <label>Capacity*</label>
+                @Html.TextBoxFor(m => m.capacity, new { placeholder = "Enter Capacity..." })
+                @Html.ValidationMessageFor(m => m.capacity)
+            </div>
+        </fieldset>
+        <div class="form-group">
+            <div>
+                <input type="submit" value="Add Class" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+    <div id="dialog-message">
+        <p>
+            @TempData["msg"]!
+        </p>
+    </div>
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#dialog-message").dialog({
+                autoOpen: false,
+                resizable: false,
+                height: 170,
+                width: 350,
+                modal: true,
+                draggable: false,
+                show: { effect: 'drop', direction: "up" },
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+                },
+                buttons: {
+                    Ok: function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            if ('@TempData["msg"]' != "") {
+                $("#dialog-message").dialog('open');
             }
-        }
-        if ($(formData).attr('enctype') == "multipart/form-data") {
-            ajaxConfig["contentType"] = false;
-            ajaxConfig["processData"] = false;
-        }
-        $.ajax(ajaxConfig);
-        return false;
-    }
-</script>
+        });
+    </script>
+}
