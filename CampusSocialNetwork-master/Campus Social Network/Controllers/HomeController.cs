@@ -78,7 +78,9 @@ namespace Campus_Social_Network.Controllers
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
+                
                 case SignInStatus.Success:
+
                     return RedirectToLocal(returnUrl, model.Email);
                 case SignInStatus.Failure:
                 default:
@@ -87,10 +89,27 @@ namespace Campus_Social_Network.Controllers
             }
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Logout()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
+        }
+
+        private IAuthenticationManager AuthenticationManager
+        {
+            get
+            {
+                return HttpContext.GetOwinContext().Authentication;
+            }
+        }
+
         private ActionResult RedirectToLocal(string returnUrl, string email)
         {
             var userManager = Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var roles = userManager.GetRoles(User.Identity.GetUserId());
+            var currentUser = new ApplicationDbContext().Users.Single(c => c.UserName == email);
+            var roles = userManager.GetRoles(currentUser.Id);
             if (Url.IsLocalUrl(returnUrl))
             {
                 return Redirect(returnUrl);

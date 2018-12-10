@@ -234,22 +234,6 @@ namespace Campus_Social_Network.Controllers
             return View("ChangePicture");
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Logout()
-        {
-            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
-        }
-
-        private IAuthenticationManager AuthenticationManager
-        {
-            get
-            {
-                return HttpContext.GetOwinContext().Authentication;
-            }
-        }
-
         private bool IsClassExists(string name)
         {
             List<Class> allClasses = db.Classes.ToList();

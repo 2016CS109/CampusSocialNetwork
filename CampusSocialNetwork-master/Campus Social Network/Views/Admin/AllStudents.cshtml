@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Campus_Social_Network.Models.Student>
+﻿@model IEnumerable<Campus_Social_Network.Models.ApplicationUser>
 
 @{
     ViewBag.Title = "AllStudents";
@@ -6,9 +6,6 @@
 }
 <table class="table">
     <tr>
-        <th>
-            Id
-        </th>
         <th>
             First Name
         </th>
@@ -28,51 +25,45 @@
             Class Id
         </th>
         <th>
-            Contact Number
+            Phone Number
         </th>
         <th>
             Email
         </th>
-        <th>
-            Password
-        </th>
-        <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.firstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.lastName)
-            </td>
-            <td>
-               @Html.DisplayFor(modelItem => item.dateOfBirth, "{0:d MMM yyyy}")
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.cnic)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.registrationNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.classId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.contactNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.emailId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.password)
-            </td>
-        </tr>
+        if (item.UserName != User.Identity.Name)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.firstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dateOfBirth, "{0:d MMM yyyy}")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cnic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.registrationNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.classId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+            </tr>
+        }
+
     }
 
 </table>

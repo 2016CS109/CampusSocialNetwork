@@ -12,11 +12,11 @@ namespace Campus_Social_Network.Models
     {
         
         [Required]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Only alphabets are allowed.")]
+        [RegularExpression(@"^[a-zA-Z ]*$", ErrorMessage = "Only alphabets are allowed.")]
         public string firstName { get; set; }
 
         [Required]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Only alphabets are allowed.")]
+        [RegularExpression(@"^[a-zA-Z ]*$", ErrorMessage = "Only alphabets are allowed.")]
         public string lastName { get; set; }
 
         [Range(typeof(DateTime), "1/1/1900", "1/1/2099")]

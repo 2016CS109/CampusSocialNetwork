@@ -36,6 +36,7 @@ namespace Campus_Social_Network.Models
     {
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Class> Classes { get; set; }
+        public DbSet<Post> Posts { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

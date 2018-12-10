@@ -31,7 +31,7 @@
                     <li>@Html.ActionLink("All Teachers", "AllTeachers", "Admin")</li>
                     <li>@Html.ActionLink("All Classes", "AllClasses", "Admin")</li>
                     <li>@Html.ActionLink("Account Settings", "AccountSettings", "Admin")</li>
-                    <li>@using (Html.BeginForm("Logout", "Admin", FormMethod.Post, new { role = "form" }))
+                    <li>@using (Html.BeginForm("Logout", "Home", FormMethod.Post, new { role = "form" }))
                     {
                         @Html.AntiForgeryToken()
                         <input type="submit" value="Logout" class="btn btn-primary" />

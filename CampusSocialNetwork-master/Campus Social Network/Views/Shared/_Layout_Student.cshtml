@@ -15,8 +15,13 @@
     <!-- Sidebar -->
     <section id="sidebar">
         <div class="inner">
-            <span class="image avatar"><img src="~/Images/Users/Tommy.png" alt="Student Pic" /></span>
-            <h3 id="logo"><a href="#">Thomas Shelby</a></h3>
+            @{
+                var db = new Campus_Social_Network.Models.ApplicationDbContext();
+                var user = db.Users.Single(c => c.UserName == User.Identity.Name);
+                var picName = user.registrationNumber + ".png";
+            }
+            <span class="image avatar"><img src="~/UserImages/@picName" alt="Student Pic" /></span>
+            <h3 id="logo"><a href="#">@user.firstName @user.lastName</a></h3>
             <nav>
                 <ul>
                     <li>@Html.ActionLink("Newsfeed", "Newsfeed", "Student")</li>
@@ -25,7 +30,13 @@
                     <li>@Html.ActionLink("View Teachers", "ViewTeachers", "Student")</li>
                     <li>@Html.ActionLink("Account Settings", "AccountSettings", "Student")</li>
                     
-                    <li>@Html.ActionLink("Logout", "Index", "Home")</li>
+                    <li>
+                        @using (Html.BeginForm("Logout", "Home", FormMethod.Post, new { role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input type="submit" value="Logout" class="btn btn-primary" />
+                    }
+                </li>
                 </ul>
             </nav>
         </div>

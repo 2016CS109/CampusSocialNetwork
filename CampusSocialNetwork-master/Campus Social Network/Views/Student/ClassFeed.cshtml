@@ -2,7 +2,7 @@
 @model Campus_Social_Network.Models.PublicNewsFeedViewModel
 
 @{
-    ViewBag.Title = "Newsfeed";
+    ViewBag.Title = "Class Group";
 }
 
 <div class="content">
@@ -24,8 +24,8 @@
                 <hr />
                 <div class="tabs">
                     <ul class="nav nav-pills">
-                        <li class="active"> <a href="#">Public</a></li>
-                        <li>@Html.ActionLink("Class Group", "ClassFeed", "Student")</li>
+                        <li>@Html.ActionLink("Public", "NewsFeed", "Student")</li>
+                        <li class="active"> <a href="#">Class Group</a></li>
                     </ul>
                 </div>
                 @foreach (Post p in Model.publicPosts.AsEnumerable().Reverse())

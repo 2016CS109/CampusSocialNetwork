@@ -230,6 +230,14 @@
     <Compile Include="Migrations\201812092144071_update.Designer.cs">
       <DependentUpon>201812092144071_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812101339572_postTable.cs" />
+    <Compile Include="Migrations\201812101339572_postTable.Designer.cs">
+      <DependentUpon>201812101339572_postTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812101424389_postTable1.cs" />
+    <Compile Include="Migrations\201812101424389_postTable1.Designer.cs">
+      <DependentUpon>201812101424389_postTable1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddStudentViewModel.cs" />
@@ -237,6 +245,9 @@
     <Compile Include="Models\Class.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\PrivacyOption.cs" />
+    <Compile Include="Models\PublicNewsFeedViewModel.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -456,6 +467,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Shared\Popup.cshtml" />
     <Content Include="Views\Admin\AccountSettings.cshtml" />
+    <Content Include="Views\Student\ClassFeed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFile\AdminProfilePhoto\" />
@@ -492,6 +504,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812092144071_update.resx">
       <DependentUpon>201812092144071_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101339572_postTable.resx">
+      <DependentUpon>201812101339572_postTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101424389_postTable1.resx">
+      <DependentUpon>201812101424389_postTable1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

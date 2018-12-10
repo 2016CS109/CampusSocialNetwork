@@ -666,3 +666,6 @@ E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social 
 E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.dll
 E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.pdb
 E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.update.resources
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.update.resources
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.postTable.resources
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.postTable1.resources
