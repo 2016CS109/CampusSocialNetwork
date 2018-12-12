@@ -20,5 +20,20 @@ namespace Campus_Social_Network.Models
 
         [Required]
         public int capacity { get; set; }
+
+        public int numberOfStudentsRegistered()
+        {
+            var db = new ApplicationDbContext();
+            var list = db.Users.ToList();
+            int studentsRegistered = 0;
+            foreach (ApplicationUser u in list)
+            {
+                if (u.classId == id)
+                {
+                    studentsRegistered++;
+                }
+            }
+            return studentsRegistered;
+        }
     }
 }

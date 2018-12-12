@@ -5,7 +5,6 @@
 @using (Html.BeginForm("ChangePicture", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <fieldset>
-        <label>Update Profile Picture:</label>
         <input type="file" name="userImage" accept="image/*" required><br>
     </fieldset>
     <input type="submit" class="btn btn-primary" value="Update">

@@ -238,6 +238,10 @@
     <Compile Include="Migrations\201812101424389_postTable1.Designer.cs">
       <DependentUpon>201812101424389_postTable1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812112242293_updateInUsers.cs" />
+    <Compile Include="Migrations\201812112242293_updateInUsers.Designer.cs">
+      <DependentUpon>201812112242293_updateInUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddStudentViewModel.cs" />
@@ -456,7 +460,7 @@
     <Content Include="Views\Admin\AllTeachers.cshtml" />
     <Content Include="Views\Admin\AllClasses.cshtml" />
     <Content Include="Views\Student\Newsfeed.cshtml" />
-    <Content Include="Views\Student\StudentProfile.cshtml" />
+    <Content Include="Views\Student\ViewProfile.cshtml" />
     <Content Include="Views\Student\Messages.cshtml" />
     <Content Include="Views\Student\ViewTeachers.cshtml" />
     <Content Include="Views\Student\AccountSettings.cshtml" />
@@ -465,9 +469,9 @@
     <Content Include="Views\Admin\ChangePassword.cshtml" />
     <Content Include="Views\Admin\ChangePicture.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Shared\Popup.cshtml" />
     <Content Include="Views\Admin\AccountSettings.cshtml" />
     <Content Include="Views\Student\ClassFeed.cshtml" />
+    <Content Include="Views\Student\ClassFeedByProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFile\AdminProfilePhoto\" />
@@ -510,6 +514,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812101424389_postTable1.resx">
       <DependentUpon>201812101424389_postTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812112242293_updateInUsers.resx">
+      <DependentUpon>201812112242293_updateInUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

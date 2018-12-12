@@ -18,18 +18,21 @@
             @{
                 var db = new Campus_Social_Network.Models.ApplicationDbContext();
                 var user = db.Users.Single(c => c.UserName == User.Identity.Name);
-                var picName = user.registrationNumber + ".png";
+                var picPath = user.imagePath;
+                if (picPath == null)
+                {
+                    picPath = "/UserImages/default.png";
+                }
             }
-            <span class="image avatar"><img src="~/UserImages/@picName" alt="Student Pic" /></span>
+            <span class="image avatar"><img src=@Url.Content(picPath) alt="Profile Pic" height="200px"/></span>
             <h3 id="logo"><a href="#">@user.firstName @user.lastName</a></h3>
             <nav>
                 <ul>
                     <li>@Html.ActionLink("Newsfeed", "Newsfeed", "Student")</li>
-                    <li>@Html.ActionLink("Profile", "StudentProfile", "Student")</li>
+                    <li>@Html.ActionLink("Profile", "ViewProfile", "Student", new { id = user.Id }, null)</li>
                     <li>@Html.ActionLink("Messages", "Messages", "Student")</li>
                     <li>@Html.ActionLink("View Teachers", "ViewTeachers", "Student")</li>
                     <li>@Html.ActionLink("Account Settings", "AccountSettings", "Student")</li>
-                    
                     <li>
                         @using (Html.BeginForm("Logout", "Home", FormMethod.Post, new { role = "form" }))
                     {

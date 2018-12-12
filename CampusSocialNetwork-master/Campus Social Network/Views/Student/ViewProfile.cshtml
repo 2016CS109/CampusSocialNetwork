@@ -2,7 +2,7 @@
 @model Campus_Social_Network.Models.PublicNewsFeedViewModel
 
 @{
-    ViewBag.Title = "Newsfeed";
+    ViewBag.Title = "Profile";
 }
 
 <div class="content">
@@ -24,15 +24,16 @@
                 <hr />
                 <div class="tabs">
                     <ul class="nav nav-pills">
-                        <li class="active"> <a href="#">Public</a></li>
-                        <li>@Html.ActionLink("Class Group", "ClassFeed", "Student")</li>
+                        <li class="active"> <a href="#">Your Public Posts</a></li>
+                        <li>
+                        <li>@Html.ActionLink("Class Group", "ClassFeedByProfile", "Student", new { id = new ApplicationDbContext().Users.Single(c => c.UserName == User.Identity.Name).Id }, null)</li>
                     </ul>
                 </div>
                 @foreach (Post p in Model.publicPosts.AsEnumerable().Reverse())
                 {
                     var postedBy = Model.getUserByPost(p);
                     var picPath = postedBy.imagePath;
-                    if(picPath == null)
+                    if (picPath == null)
                     {
                         picPath = "~/UserImages/default.png";
                     }

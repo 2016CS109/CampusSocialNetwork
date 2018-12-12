@@ -80,7 +80,6 @@ namespace Campus_Social_Network.Controllers
             {
                 
                 case SignInStatus.Success:
-
                     return RedirectToLocal(returnUrl, model.Email);
                 case SignInStatus.Failure:
                 default:

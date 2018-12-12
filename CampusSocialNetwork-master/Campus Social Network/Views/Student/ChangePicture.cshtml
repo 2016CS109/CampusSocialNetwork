@@ -1,12 +1,15 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Change Picture";
 }
 
-<form id="UpdateAdminProfile" name="UpdateAdminProfile" method="post" action="">
+@using (Html.BeginForm("ChangePicture", "Student", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
     <fieldset>
-        <label>Update Profile Picture:</label>
-        <input type="file" name="ProfilePic"><br>
+        <input type="file" name="userImage" accept="image/*" required><br>
     </fieldset>
     <input type="submit" class="btn btn-primary" value="Update">
-</form>
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -22,6 +22,8 @@ namespace Campus_Social_Network.Models
 
         public int classId { get; set; }
 
+        public string imagePath { get; set; }
+
             public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             

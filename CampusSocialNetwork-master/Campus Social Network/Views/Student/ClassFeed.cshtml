@@ -31,14 +31,18 @@
                 @foreach (Post p in Model.publicPosts.AsEnumerable().Reverse())
                 {
                     var postedBy = Model.getUserByPost(p);
-                    var picName = postedBy.registrationNumber + ".png";
+                    var picPath = postedBy.imagePath;
+                    if (picPath == null)
+                    {
+                        picPath = "~/UserImages/default.png";
+                    }
                     <hr />
                     <div class="posts">
                         <div class="media">
-                            <h4 class="media-heading"><a href="#"> @postedBy.firstName @postedBy.lastName </a><small>On @p.postTime</small></h4>
                             <div class="media-left">
-                                <img src="~/UserImages/@picName" class="media-object" style="width:60px; height:80px">
+                                <img src="@Url.Content(picPath)" class="media-object" style="width:60px; height:80px">
                             </div>
+                            <h4 class="media-heading"><a href="#"> @postedBy.firstName @postedBy.lastName </a><small>On @p.postTime</small></h4>
                             <div class="media-body">
                                 <p class="text-justify">@p.postText </p>
                             </div>

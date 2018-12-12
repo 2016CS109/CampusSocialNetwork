@@ -13,6 +13,7 @@
             <p>Fill up below form to add a new teacher.</p>
         </div>
         <fieldset>
+            <hr />
             <div class="form-group">
                 <label>First Name*</label>
                 @Html.TextBoxFor(m => m.firstName, new { placeholder = "Enter First Name..." })
@@ -39,6 +40,7 @@
                 @Html.ValidationMessageFor(m => m.emailId)
             </div>
         </fieldset>
+        <hr />
         <div class="form-group">
             <div>
                 <input type="submit" value="Add Teacher" class="btn btn-primary" />

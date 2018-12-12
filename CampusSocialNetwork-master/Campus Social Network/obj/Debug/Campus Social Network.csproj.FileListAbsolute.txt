@@ -568,7 +568,6 @@ E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network
 E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Google.xml
 E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.Twitter.xml
 E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.csprojResolveAssemblyReference.cache
 E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.dll
 E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.pdb
 E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.initialModel.resources
@@ -669,3 +668,5 @@ E:\CampusSN - Copy\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social 
 E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.update.resources
 E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.postTable.resources
 E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.postTable1.resources
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus Social Network.csprojResolveAssemblyReference.cache
+E:\CampusSN\CampusSocialNetwork\CampusSocialNetwork-master\Campus Social Network\obj\Debug\Campus_Social_Network.Migrations.updateInUsers.resources

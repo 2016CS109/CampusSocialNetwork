@@ -15,11 +15,11 @@
     <!-- Sidebar -->
     <section id="sidebar">
         <div class="inner">
-            <span class="image avatar"><img src="~/UserImages/Admin.png" alt="Admin Pic" /></span>
-            @{ 
+            @{
                 var db = new Campus_Social_Network.Models.ApplicationDbContext();
                 var user = db.Users.Single(c => c.UserName == User.Identity.Name);
             }
+            <span class="image avatar"><img src=@Url.Content(user.imagePath) alt="Admin Pic" height="200px"/></span>
             <h3 id="logo"><a href="#">@user.firstName @user.lastName</a></h3>
             <nav>
                 <ul>

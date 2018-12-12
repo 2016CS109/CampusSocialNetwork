@@ -77,21 +77,22 @@ namespace Campus_Social_Network.Controllers
                 if (result.Succeeded)
                 {
                     await UserManager.AddToRoleAsync(user.Id, "Student");
-                    //Extract Image File Name.
-                    string fileName = user.registrationNumber + Path.GetExtension(model.UserImage.FileName);
+                    deleteUserImage(user.registrationNumber);
+                    string fileName = user.registrationNumber + DateTime.Now.ToString("_MMddyyyy_HHmmss") + Path.GetExtension(model.UserImage.FileName);
 
                     //Set the Image File Path.
                     string filePath = "~/UserImages/" + fileName;
 
                     //Save the Image File in Folder.
                     model.UserImage.SaveAs(Server.MapPath(filePath));
-
+                    var addedUser = db.Users.Single(c => c.UserName == user.UserName);
+                    addedUser.imagePath = filePath;
+                    db.SaveChanges();
                     TempData["Msg"] = "Successfully Added";
                     return RedirectToAction("AddStudent");
                 }
                 AddErrors(result);
             }
-
             // If we got this far, something failed, redisplay form
             model.allClasses = db.Classes.ToList();
             return View(model);
@@ -183,6 +184,7 @@ namespace Campus_Social_Network.Controllers
             admin.PhoneNumber = model.PhoneNumber;
             admin.UserName = model.Email;
             db.SaveChanges();
+            TempData["Msg"] = "Changes Saved";
             return View("AccountSettings");
         }
 
@@ -202,6 +204,7 @@ namespace Campus_Social_Network.Controllers
             var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
             if (result.Succeeded)
             {
+                TempData["Msg"] = "Password Changed Successfully";
                 return View("Index");
             }
             AddErrors(result);
@@ -215,23 +218,18 @@ namespace Campus_Social_Network.Controllers
         [HttpPost]
         public ActionResult ChangePicture(HttpPostedFileBase userImage)
         {
-            var folderPath = Server.MapPath("~/UserImages");
-            DirectoryInfo folderInfo = new DirectoryInfo(folderPath);
-            foreach (FileInfo file in folderInfo.GetFiles())
-            {
-                if (file.Name == "Admin.png")
-                {
-                    file.Delete();
-                }
-            }
-            string fileName = "Admin.png";
+            var user = db.Users.Single(c => c.UserName == User.Identity.Name);
+            deleteUserImage("admin");
+            string fileName = "admin" + DateTime.Now.ToString("_MMddyyyy_HHmmss") + Path.GetExtension(userImage.FileName);
 
             //Set the Image File Path.
             string filePath = "~/UserImages/" + fileName;
 
             //Save the Image File in Folder.
             userImage.SaveAs(Server.MapPath(filePath));
-            return View("ChangePicture");
+            user.imagePath = filePath;
+            db.SaveChanges();
+            return RedirectToAction("ChangePicture");
         }
 
         private bool IsClassExists(string name)
@@ -291,6 +289,19 @@ namespace Campus_Social_Network.Controllers
             foreach (var error in result.Errors)
             {
                 ModelState.AddModelError("", error);
+            }
+        }
+
+        private void deleteUserImage(string name)
+        {
+            var folderPath = Server.MapPath("~/UserImages");
+            DirectoryInfo folderInfo = new DirectoryInfo(folderPath);
+            foreach (FileInfo file in folderInfo.GetFiles())
+            {
+                if (file.Name.Contains(name))
+                {
+                    file.Delete();
+                }
             }
         }
     }
